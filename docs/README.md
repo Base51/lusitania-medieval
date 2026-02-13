@@ -1,19 +1,129 @@
-# Documentação - Lusitânia Medieval
+# 📚 Lusitania Medieval — Documentação Oficial
 
-Esta pasta contém toda a documentação do projeto Lusitânia Medieval.
+Bem-vindo ao centro de documentação estratégica do **Lusitania Medieval**.
 
-## Índice
+Esta pasta contém todos os documentos estruturais do projeto: identidade, modelo de negócio, plano financeiro, marketing, operações e candidaturas.
 
-| Documento | Descrição |
-|-----------|-----------|
-| [01_identidade.md](01_identidade.md) | Identidade visual e conceito da marca |
-| [02_modelo_negocio.md](02_modelo_negocio.md) | Modelo de negócio e proposta de valor |
-| [03_plano_financeiro.md](03_plano_financeiro.md) | Plano financeiro e projeções |
-| [04_marketing.md](04_marketing.md) | Estratégia de marketing e comunicação |
-| [05_operacoes.md](05_operacoes.md) | Plano operacional e logística |
-| [06_candidaturas.md](06_candidaturas.md) | Candidaturas a apoios e financiamento |
-| [Documento Mestre](Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md) | Documento completo do projeto |
+> 📌 Regra base: tudo deve reforçar **imersão, autoridade histórica, profissionalismo e posicionamento premium**.
 
-## Utilização
+---
 
-Cada documento foca num aspeto específico do projeto. O documento mestre contém uma visão consolidada de toda a informação.
+# 🏰 Estrutura da Documentação
+
+## 01_identidade.md
+Contém os fundamentos estratégicos da marca:
+- Missão
+- Visão
+- Valores
+- Manifesto
+- Arquétipo
+- Posicionamento
+- Proposta de valor
+- Diferencial competitivo
+
+---
+
+## 02_modelo_negocio.md
+Estrutura do modelo de negócio:
+- Business Model Canvas
+- Segmentos de clientes
+- Fontes de receita
+- Estratégia de pricing
+- Estratégia de crescimento
+- Estratégia de escala
+
+---
+
+## 03_plano_financeiro.md
+Planeamento financeiro:
+- Investimento inicial
+- Projeção Ano 1
+- Projeção 3 anos
+- Estrutura de custos
+- Break-even
+- Estratégia de reinversão
+
+---
+
+## 04_marketing.md
+Estratégia de posicionamento e aquisição:
+- Público-alvo detalhado
+- Estratégia digital
+- Funil de vendas
+- Estratégia B2B
+- Branding e tom de comunicação
+
+---
+
+## 05_operacoes.md
+Estrutura interna e execução:
+- Organização da equipa
+- Protocolos de segurança
+- Logística de eventos
+- Checklists operacionais
+- Estrutura legal e seguros
+
+---
+
+## 06_candidaturas.md
+Base para apoios e fundos:
+- Enquadramento cultural
+- Impacto económico
+- Estratégia para Portugal 2030 / PRR
+- Textos base para candidaturas
+
+---
+
+## Documento Mestre Completo
+
+**Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md**
+
+Documento consolidado com visão geral estratégica.
+
+---
+
+# 🛡️ Princípios da Documentação
+
+- Linguagem clara e profissional
+- Estrutura modular
+- Foco estratégico (não apenas descritivo)
+- Atualização trimestral recomendada
+- Versionamento via Pull Request
+
+---
+
+# 🔄 Processo de Atualização
+
+1. Criar branch para alteração (`docs/...`)
+2. Atualizar ficheiro relevante
+3. Commit claro (`docs: atualizar plano financeiro`)
+4. Abrir Pull Request
+5. Revisão por pelo menos 1 membro da equipa
+6. Merge para `main`
+
+---
+
+# 🎯 Diretriz Estratégica
+
+Antes de alterar qualquer documento, perguntar:
+
+- Isto reforça o posicionamento premium?
+- Isto reforça a autoridade histórica?
+- Isto aproxima-nos do foco B2B?
+- Isto aumenta a escalabilidade do projeto?
+
+Se a resposta for não → rever.
+
+---
+
+# 📌 Nota Importante
+
+A documentação aqui presente é estratégica e pode conter informação sensível (financeira e operacional).  
+Avaliar sempre se o repositório deve permanecer público ou privado.
+
+---
+
+**Lusitania Medieval**  
+Experiência. Honra. Estratégia.
+
+
