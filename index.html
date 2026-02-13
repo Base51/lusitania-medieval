@@ -2,7 +2,7 @@
 <html lang="pt-PT">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Lusitania Medieval — experiências medievais imersivas em Portugal para empresas, casamentos e eventos públicos." />
   <title>Lusitania Medieval — Experiências Medievais Imersivas</title>
 
@@ -11,1006 +11,368 @@
   <meta property="og:description" content="Team building, casamentos e eventos medievais com autoridade histórica, profissionalismo e segurança." />
   <meta property="og:type" content="website" />
 
-  <!-- Optional: Google Fonts (podes remover se quiseres 100% offline) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg: #0b0a09;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.09);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.72);
-      --muted2: rgba(255,255,255,0.58);
-      --gold: #d7b36a;
-      --gold2: #b8944a;
-      --danger: #ff5a5a;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1160px;
-    }
-
-    *{ box-sizing: border-box; }
-    html{ scroll-behavior: smooth; }
-    body{
-      margin:0;
-      background:
-        radial-gradient(1200px 800px at 10% 10%, rgba(215,179,106,0.12), transparent 55%),
-        radial-gradient(900px 650px at 90% 10%, rgba(215,179,106,0.08), transparent 55%),
-        radial-gradient(900px 700px at 70% 90%, rgba(255,255,255,0.06), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.55;
-    }
-
-    a{ color: inherit; text-decoration: none; }
-    a:focus, button:focus, input:focus, textarea:focus{
-      outline: 2px solid rgba(215,179,106,.65);
-      outline-offset: 3px;
-      border-radius: 10px;
-    }
-
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      border: 1px solid rgba(215,179,106,.35);
-      background: rgba(215,179,106,.08);
-      color: var(--gold);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    /* Header */
-    header{
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: blur(12px);
-      background: rgba(11,10,9,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 0;
-      gap: 14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap: 12px;
-      min-width: 220px;
-    }
-    .mark{
-      width: 38px; height: 38px; border-radius: 12px;
-      background:
-        radial-gradient(18px 18px at 30% 25%, rgba(255,255,255,.22), transparent 60%),
-        linear-gradient(135deg, rgba(215,179,106,.25), rgba(255,255,255,.06));
-      border: 1px solid rgba(215,179,106,.35);
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
-    }
-    .brand h1{
-      font-family: Cinzel, serif;
-      font-size: 16px;
-      letter-spacing: .08em;
-      margin: 0;
-      line-height: 1.1;
-    }
-    .brand small{
-      display:block;
-      margin-top: 2px;
-      font-size: 11px;
-      color: var(--muted2);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    nav ul{
-      list-style:none; margin: 0; padding: 0;
-      display:flex; align-items:center; gap: 18px;
-    }
-    nav a{
-      font-size: 14px;
-      color: var(--muted);
-      padding: 10px 10px;
-      border-radius: 12px;
-      transition: background .2s ease, color .2s ease;
-    }
-    nav a:hover{
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
-    }
-
-    .actions{ display:flex; gap: 10px; align-items:center; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      transition: transform .12s ease, background .2s ease, border-color .2s ease;
-      white-space: nowrap;
-    }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.08); }
-    .btn.primary{
-      border-color: rgba(215,179,106,.45);
-      background: linear-gradient(135deg, rgba(215,179,106,.18), rgba(255,255,255,.06));
-      box-shadow: 0 18px 50px rgba(215,179,106,0.12);
-    }
-    .btn.primary:hover{ border-color: rgba(215,179,106,.75); }
-    .btn.ghost{
-      border-color: rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .menu-btn{
-      display:none;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.06);
-      border-radius: 14px;
-      padding: 10px 12px;
-      cursor: pointer;
-      color: var(--text);
-      font-weight: 700;
-      letter-spacing: .08em;
-    }
-
-    /* Mobile nav panel */
-    .mobile-nav{
-      display:none;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding: 12px 0 16px;
-    }
-    .mobile-nav a{
-      display:block;
-      padding: 12px 10px;
-      border-radius: 12px;
-      color: var(--muted);
-    }
-    .mobile-nav a:hover{ background: rgba(255,255,255,0.06); color: var(--text); }
-
-    /* Sections */
-    section{ padding: 70px 0; }
-    .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap: 18px;
-      margin-bottom: 22px;
-    }
-    .section-title h2{
-      font-family: Cinzel, serif;
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: .04em;
-    }
-    .section-title p{
-      margin: 0;
-      max-width: 560px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* Hero */
-    .hero{ padding: 54px 0 40px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-    .hero-card{
-      border-radius: var(--radius2);
-      background:
-        radial-gradient(900px 480px at 20% 15%, rgba(215,179,106,.16), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position: relative;
-      min-height: 380px;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        radial-gradient(500px 200px at 50% -10%, rgba(255,255,255,0.15), transparent 60%),
-        radial-gradient(500px 280px at 80% 25%, rgba(215,179,106,0.12), transparent 55%),
-        radial-gradient(380px 260px at 10% 85%, rgba(255,255,255,0.07), transparent 60%);
-      pointer-events:none;
-    }
-    .hero-inner{
-      position: relative;
-      padding: 30px 28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      height:100%;
-    }
-    .hero h2{
-      font-family: Cinzel, serif;
-      font-size: 42px;
-      line-height: 1.05;
-      margin: 14px 0 10px;
-      letter-spacing: .02em;
-    }
-    .hero p{
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 16px;
-      max-width: 640px;
-    }
-    .hero-ctas{ display:flex; gap: 10px; flex-wrap: wrap; }
-    .hero-note{
-      margin-top: 16px;
-      font-size: 12px;
-      color: var(--muted2);
-    }
-
-    .hero-side{
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
-      overflow:hidden;
-      position: relative;
-      min-height: 380px;
-    }
-    .hero-side .pad{ padding: 22px; position: relative; }
-    .hero-side h3{
-      font-family: Cinzel, serif;
-      margin: 0 0 8px;
-      font-size: 18px;
-      letter-spacing: .05em;
-    }
-    .statgrid{
-      margin-top: 16px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .stat{
-      border-radius: 16px;
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 12px;
-    }
-    .stat b{ display:block; font-size: 18px; color: var(--text); }
-    .stat span{ font-size: 12px; color: var(--muted2); }
-    .side-list{
-      margin: 14px 0 0;
-      padding: 0;
-      list-style: none;
-      display:grid;
-      gap: 10px;
-    }
-    .side-list li{
-      display:flex; gap:10px; align-items:flex-start;
-      color: var(--muted);
-      font-size: 13px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .dot{
-      width: 10px; height: 10px; border-radius: 50%;
-      background: rgba(215,179,106,.85);
-      margin-top: 4px;
-      flex: 0 0 auto;
-      box-shadow: 0 0 0 4px rgba(215,179,106,.12);
-    }
-
-    /* Cards */
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .card{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 18px;
-      box-shadow: 0 16px 50px rgba(0,0,0,.25);
-    }
-    .card h3{
-      margin: 10px 0 8px;
-      font-family: Cinzel, serif;
-      font-size: 18px;
-      letter-spacing: .03em;
-    }
-    .card p{ margin: 0 0 12px; color: var(--muted); font-size: 14px; }
-    .tagline{ color: var(--muted2); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    .link{
-      display:inline-flex; align-items:center; gap: 8px;
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: .03em;
-      border-radius: 12px;
-      padding: 9px 10px;
-      background: rgba(215,179,106,.08);
-      border: 1px solid rgba(215,179,106,.20);
-    }
-    .link:hover{ border-color: rgba(215,179,106,.45); }
-
-    /* Split */
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-    .panel{
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 20px;
-      box-shadow: 0 16px 50px rgba(0,0,0,.25);
-    }
-    .panel h3{
-      margin: 0 0 10px;
-      font-family: Cinzel, serif;
-      letter-spacing: .04em;
-    }
-    .check{
-      margin: 0; padding: 0; list-style: none;
-      display:grid; gap: 10px;
-    }
-    .check li{
-      display:flex; gap: 10px; align-items:flex-start;
-      color: var(--muted);
-      font-size: 14px;
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(0,0,0,0.16);
-    }
-    .badge{
-      display:inline-flex; align-items:center; justify-content:center;
-      width: 22px; height: 22px; border-radius: 8px;
-      background: rgba(215,179,106,0.18);
-      border: 1px solid rgba(215,179,106,0.35);
-      color: var(--gold);
-      font-weight: 900;
-      flex: 0 0 auto;
-      margin-top: 1px;
-    }
-
-    /* Gallery placeholders */
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .ph{
-      border-radius: 18px;
-      height: 180px;
-      background:
-        radial-gradient(220px 120px at 30% 20%, rgba(255,255,255,.10), transparent 60%),
-        radial-gradient(260px 160px at 80% 55%, rgba(215,179,106,.10), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.10));
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 18px 60px rgba(0,0,0,.25);
-      position: relative;
-      overflow:hidden;
-    }
-    .ph span{
-      position:absolute;
-      left: 14px; bottom: 12px;
-      font-size: 12px;
-      color: var(--muted);
-      background: rgba(0,0,0,0.30);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 6px 10px;
-      border-radius: 999px;
-      backdrop-filter: blur(6px);
-    }
-
-    /* Testimonials */
-    .quotes{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    .quote{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 18px;
-    }
-    .quote p{ margin: 0 0 12px; color: var(--muted); font-size: 14px; }
-    .quote b{ display:block; font-size: 13px; letter-spacing: .02em; }
-    .quote small{ color: var(--muted2); }
-
-    /* Contact */
-    form{
-      display:grid;
-      gap: 10px;
-    }
-    label{ font-size: 12px; color: var(--muted2); letter-spacing: .08em; text-transform: uppercase; }
-    input, textarea, select{
-      width:100%;
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--text);
-      border-radius: 16px;
-      padding: 12px 12px;
-      font-size: 14px;
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-    .two{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .fine{
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--muted2);
-    }
-
-    /* Footer */
-    footer{
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding: 26px 0 40px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .foot{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .foot a{ color: var(--muted); }
-    .foot a:hover{ color: var(--text); }
-
-    /* Utilities */
-    .muted{ color: var(--muted); }
-    .center{ text-align:center; }
-    .topgap{ margin-top: 18px; }
-    .divider{ height: 1px; background: rgba(255,255,255,0.07); margin: 22px 0; }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .grid3, .quotes{ grid-template-columns: 1fr; }
-      .split{ grid-template-columns: 1fr; }
-      .gallery{ grid-template-columns: 1fr; }
-      nav ul{ display:none; }
-      .menu-btn{ display:inline-flex; align-items:center; justify-content:center; }
-      .mobile-nav.open{ display:block; }
-      .brand{ min-width: unset; }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Lusitania Medieval",
-    "description": "Experiências medievais imersivas em Portugal: team building, casamentos e eventos públicos.",
-    "url": "",
-    "sameAs": []
-  }
-  </script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="#top" aria-label="Lusitania Medieval (Topo)">
-          <div class="mark" aria-hidden="true"></div>
-          <div>
-            <h1>LUSITANIA MEDIEVAL</h1>
-            <small>Experiências imersivas</small>
-          </div>
-        </a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="logo-img">
+      </a>
+      
+      <nav class="nav">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
 
-        <nav aria-label="Navegação principal">
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#empresas">Empresas</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
+      <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
 
-        <div class="actions">
-          <a class="btn ghost" href="#contacto">Falar connosco</a>
-          <a class="btn primary" href="#contacto">Pedir proposta</a>
-          <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">MENU</button>
-        </div>
-      </div>
-
-      <div class="mobile-nav" id="mobileNav" aria-label="Navegação móvel">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#empresas">Empresas</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#contacto">Contacto</a>
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#sobre" class="mobile-nav-link">Sobre</a>
+    <a href="#servicos" class="mobile-nav-link">Serviços</a>
+    <a href="#portfolio" class="mobile-nav-link">Portfólio</a>
+    <a href="#contacto" class="mobile-nav-link">Contacto</a>
+    <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero-card">
-            <div class="hero-inner">
-              <div>
-                <span class="pill">Portugal • Imersão • Segurança</span>
-                <h2>Desperte o seu clã.</h2>
-                <p>
-                  Experiências medievais imersivas para <b>empresas</b>, <b>casamentos</b> e <b>eventos públicos</b> —
-                  com autoridade histórica, profissionalismo e combate supervisionado.
-                </p>
-                <div class="hero-ctas">
-                  <a class="btn primary" href="#contacto">Pedir proposta</a>
-                  <a class="btn" href="#servicos">Conhecer experiência</a>
-                </div>
-                <div class="hero-note">
-                  Sem fantasia exagerada: inspiração na Idade Média Ibérica e na antiga Lusitânia.
-                </div>
-              </div>
-
-              <div class="divider" aria-hidden="true"></div>
-
-              <div class="muted" style="font-size:13px">
-                <b style="color:var(--text)">Prioridade B2B:</b> team building estratégico e memorável para equipas.
-              </div>
-            </div>
-          </div>
-
-          <aside class="hero-side">
-            <div class="pad">
-              <h3>Porque funciona</h3>
-              <p class="muted" style="margin:0">
-                Estrutura clara, segurança e narrativa: uma experiência que cria coesão e gera histórias para contar.
-              </p>
-
-              <div class="statgrid" aria-label="Indicadores">
-                <div class="stat">
-                  <b>+Impacto</b>
-                  <span>Experiência memorável</span>
-                </div>
-                <div class="stat">
-                  <b>+Coesão</b>
-                  <span>Clãs e desafios</span>
-                </div>
-                <div class="stat">
-                  <b>+Liderança</b>
-                  <span>Decisão sob pressão</span>
-                </div>
-                <div class="stat">
-                  <b>Segurança</b>
-                  <span>Briefing e supervisão</span>
-                </div>
-              </div>
-
-              <ul class="side-list" aria-label="Destaques">
-                <li><span class="dot" aria-hidden="true"></span><span>Atividades moduláveis para 10 a 200+ participantes.</span></li>
-                <li><span class="dot" aria-hidden="true"></span><span>Protocolos e equipamento adequados ao público.</span></li>
-                <li><span class="dot" aria-hidden="true"></span><span>Estética premium e coerência histórica.</span></li>
-              </ul>
-            </div>
-          </aside>
+      <div class="hero-image">
+        <img src="assets/img/hero/hero-main.webp" alt="Lusitania Medieval - Experiências Medievais">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag">Experiências Medievais Imersivas</span>
+        <h1 class="hero-title">Desperte o Espírito<br>do seu Clã</h1>
+        <p class="hero-subtitle">Team building, casamentos e eventos com autoridade histórica, profissionalismo e segurança em Portugal.</p>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary btn-lg">Pedir Proposta</a>
+          <a href="#servicos" class="btn btn-outline btn-lg">Conhecer Serviços</a>
         </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Explorar</span>
+        <div class="scroll-indicator"></div>
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <span class="pill">Identidade</span>
-            <h2>O que é o Lusitania Medieval</h2>
-          </div>
-          <p>
-            Não fazemos “animação medieval comum”. Criamos experiências imersivas, estratégicas e seguras — com foco na
-            Idade Média Ibérica e na valorização cultural em Portugal.
-          </p>
+    <!-- Sobre Section -->
+    <section id="sobre" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Quem Somos</span>
+          <h2 class="section-title">Autenticidade.<br>Profissionalismo.<br>Impacto.</h2>
         </div>
-
-        <div class="split">
-          <div class="panel">
-            <h3>Missão</h3>
-            <p class="muted" style="margin:0">
-              Criar experiências medievais autênticas e memoráveis que desenvolvam espírito de equipa,
-              celebrem momentos únicos e valorizem o património cultural.
-            </p>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead">Não fazemos animação medieval comum. Criamos experiências imersivas, estratégicas e seguras — com foco na Idade Média Ibérica e na valorização cultural portuguesa.</p>
+            <p>A Lusitania Medieval nasceu da paixão pela recriação histórica e da vontade de oferecer algo verdadeiramente diferenciador ao mercado corporativo e de eventos em Portugal.</p>
+            <p>Combinamos rigor histórico, produção cinematográfica e protocolos de segurança para criar momentos que transformam equipas e celebram ocasiões especiais.</p>
           </div>
-
-          <div class="panel">
-            <h3>Posicionamento</h3>
-            <ul class="check">
-              <li><span class="badge">✓</span>Marca premium, estética cinematográfica e profissional.</li>
-              <li><span class="badge">✓</span>Combate supervisionado e protocolos de segurança.</li>
-              <li><span class="badge">✓</span>Autenticidade histórica (sem fantasia exagerada).</li>
-              <li><span class="badge">✓</span>Foco B2B: liderança, cooperação e estratégia.</li>
-            </ul>
+          
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">⚔️</div>
+              <h3>Autenticidade</h3>
+              <p>Inspiração na Idade Média Ibérica, sem fantasia exagerada.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🛡️</div>
+              <h3>Segurança</h3>
+              <p>Protocolos rigorosos e equipamento certificado.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🏰</div>
+              <h3>Imersão</h3>
+              <p>Narrativa envolvente e produção de excelência.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">👑</div>
+              <h3>Premium</h3>
+              <p>Estética cinematográfica e atenção ao detalhe.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <span class="pill">Serviços</span>
-            <h2>O que fazemos</h2>
-          </div>
-          <p>Escolha o caminho do seu clã: corporativo, cerimónia ou evento público — com módulos ajustáveis.</p>
+    <!-- Serviços Section -->
+    <section id="servicos" class="section section-dark">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="section-tag">O Que Fazemos</span>
+          <h2 class="section-title">Serviços</h2>
+          <p class="section-subtitle">Experiências memoráveis para cada ocasião</p>
         </div>
-
-        <div class="grid3">
-          <div class="card">
-            <div class="tagline">B2B • Prioridade</div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-tag">B2B • Prioridade</div>
             <h3>Team Building Medieval</h3>
-            <p>
-              Formação de clãs, desafios estratégicos e combate supervisionado — uma experiência que melhora coesão,
-              comunicação e liderança.
-            </p>
-            <a class="link" href="#empresas" aria-label="Ver Team Building para empresas">Ver para empresas →</a>
+            <p>Formação de clãs, desafios estratégicos e combate supervisionado. Uma experiência que melhora coesão, comunicação e liderança.</p>
+            <ul class="service-features">
+              <li>Grupos de 10 a 200+ participantes</li>
+              <li>Atividades moduláveis</li>
+              <li>Debrief com ligação a competências</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Saber Mais →</a>
           </div>
-
-          <div class="card">
-            <div class="tagline">Privado</div>
+          
+          <div class="service-card">
+            <div class="service-tag">Privado</div>
             <h3>Casamentos Medievais</h3>
-            <p>
-              Cerimónias temáticas, cortejo, ambientação histórica e momentos épicos para um dia verdadeiramente único.
-            </p>
-            <a class="link" href="#contacto" aria-label="Pedir orçamento para casamentos">Pedir orçamento →</a>
+            <p>Cerimónias temáticas, cortejo, ambientação histórica e momentos épicos para um dia verdadeiramente único.</p>
+            <ul class="service-features">
+              <li>Cerimónia personalizada</li>
+              <li>Figurantes e animação</li>
+              <li>Decoração e adereços</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Pedir Orçamento →</a>
           </div>
-
-          <div class="card">
-            <div class="tagline">Público</div>
+          
+          <div class="service-card">
+            <div class="service-tag">Público</div>
             <h3>Municípios & Feiras</h3>
-            <p>
-              Recriações históricas, torneios e animação estruturada para dinamização cultural e turística.
-            </p>
-            <a class="link" href="#contacto" aria-label="Pedir proposta para municípios">Pedir proposta →</a>
-          </div>
-        </div>
-
-        <div class="topgap split">
-          <div class="panel">
-            <h3>Diferencial</h3>
-            <ul class="check">
-              <li><span class="badge">✓</span>Experiência imersiva com narrativa e ritmo.</li>
-              <li><span class="badge">✓</span>Profissionalismo e produção organizada.</li>
-              <li><span class="badge">✓</span>Segurança como prioridade absoluta.</li>
-              <li><span class="badge">✓</span>Conteúdo adaptável: indoor/outdoor, vários públicos.</li>
+            <p>Recriações históricas, torneios e animação estruturada para dinamização cultural e turística.</p>
+            <ul class="service-features">
+              <li>Produção completa</li>
+              <li>Torneios e espetáculos</li>
+              <li>Adequado a grandes públicos</li>
             </ul>
-          </div>
-          <div class="panel">
-            <h3>Formatos</h3>
-            <ul class="check">
-              <li><span class="badge">⚔</span>Workshops e iniciações (grupos pequenos).</li>
-              <li><span class="badge">🛡</span>Desafios de clãs (médio/grande grupo).</li>
-              <li><span class="badge">🏰</span>Eventos completos com ambientação e figurantes.</li>
-              <li><span class="badge">🔥</span>Experiências premium (noite, banquete, espetáculo).</li>
-            </ul>
+            <a href="#contacto" class="btn btn-outline">Pedir Proposta →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EMPRESAS -->
-    <section id="empresas">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <span class="pill">Empresas</span>
-            <h2>Team building que cria líderes</h2>
-          </div>
-          <p>
-            Um formato pensado para RH e Direção: cooperação, estratégia e tomada de decisão — com impacto real e
-            memórias duradouras.
-          </p>
+    <!-- Portfólio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfólio</span>
+          <h2 class="section-title">Galeria</h2>
         </div>
-
-        <div class="split">
-          <div class="panel">
-            <h3>Benefícios</h3>
-            <ul class="check">
-              <li><span class="badge">✓</span>Melhora comunicação e alinhamento da equipa.</li>
-              <li><span class="badge">✓</span>Estimula liderança e responsabilidade.</li>
-              <li><span class="badge">✓</span>Reforça confiança e coesão em pouco tempo.</li>
-              <li><span class="badge">✓</span>Cria conteúdo espontâneo (fotos/vídeos) para employer branding.</li>
-            </ul>
-            <div class="topgap">
-              <a class="btn primary" href="#contacto">Solicitar proposta corporativa</a>
-              <a class="btn" href="#portfolio">Ver portfólio</a>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item portfolio-large">
+            <div class="portfolio-placeholder">
+              <span>Imagem Principal</span>
             </div>
           </div>
-
-          <div class="panel">
-            <h3>Como funciona (exemplo)</h3>
-            <ol class="muted" style="margin:0; padding-left: 18px; display:grid; gap:10px">
-              <li><b style="color:var(--text)">Briefing & segurança:</b> regras, equipamento, objetivos.</li>
-              <li><b style="color:var(--text)">Formação de clãs:</b> identidade, papéis e estratégia.</li>
-              <li><b style="color:var(--text)">Desafios:</b> provas físicas e mentais, colaboração sob pressão.</li>
-              <li><b style="color:var(--text)">Conquista final:</b> grande desafio com scoring e narrativa.</li>
-              <li><b style="color:var(--text)">Debrief:</b> reflexões e ligação a competências de trabalho.</li>
-            </ol>
-            <p class="fine">
-              Ajustável ao vosso objetivo: integração, liderança, cultura, gestão de mudança, etc.
-            </p>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Team Building</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Casamentos</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Eventos</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Torneios</span>
+            </div>
           </div>
         </div>
+        
+        <p class="portfolio-note">Adicione fotografias reais para elevar o impacto visual do site.</p>
       </div>
     </section>
 
-    <!-- PORTFÓLIO -->
-    <section id="portfolio">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <span class="pill">Portfólio</span>
-            <h2>Imagens que contam a história</h2>
-          </div>
-          <p>
-            Substitua estes blocos por fotografias reais assim que tiverem material (é aqui que o site vira “premium”).
-          </p>
+    <!-- Testemunhos Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="section-tag">Testemunhos</span>
+          <h2 class="section-title">O Que Dizem de Nós</h2>
         </div>
-
-        <div class="gallery" aria-label="Galeria (placeholders)">
-          <div class="ph"><span>Team Building</span></div>
-          <div class="ph"><span>Casamentos</span></div>
-          <div class="ph"><span>Municípios</span></div>
-        </div>
-
-        <div class="topgap section-title" style="margin-top:30px">
-          <div>
-            <span class="pill">Testemunhos</span>
-            <h2>Confiança & autoridade</h2>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Uma experiência fora do comum — elevou a energia da equipa e criou ligação imediata."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>Diretor RH • Empresa</span>
+            </div>
           </div>
-          <p>Quando tiverem clientes, coloquem aqui frases curtas e objetivas (com nome e cargo).</p>
-        </div>
-
-        <div class="quotes">
-          <div class="quote">
-            <p>“Uma experiência fora do comum — elevou a energia da equipa e criou ligação imediata.”</p>
-            <b>Nome Apelido</b>
-            <small>Cargo • Empresa</small>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Organização impecável. Segurança clara. O formato é memorável e muito bem conduzido."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>CEO • Empresa</span>
+            </div>
           </div>
-          <div class="quote">
-            <p>“Organização impecável. Segurança clara. O formato é memorável e muito bem conduzido.”</p>
-            <b>Nome Apelido</b>
-            <small>RH • Empresa</small>
-          </div>
-          <div class="quote">
-            <p>“Autenticidade e impacto visual. Foi o destaque do evento e o público ficou rendido.”</p>
-            <b>Nome Apelido</b>
-            <small>Município • Cultura</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-      <div class="wrap">
-        <div class="section-title">
-          <div>
-            <span class="pill">Contacto</span>
-            <h2>Pedir proposta</h2>
-          </div>
-          <p>
-            Envie os dados básicos e respondemos com uma proposta ajustada ao vosso evento.
-            (Este formulário usa <b>mailto</b>; podem trocar depois por Formspree/Netlify Forms/Google Forms.)
-          </p>
-        </div>
-
-        <div class="split">
-          <div class="panel">
-            <h3>Formulário rápido</h3>
-
-            <!-- mailto: substitui com o email oficial quando existir -->
-            <form id="leadForm" action="mailto:contacto@lusitaniamedieval.pt" method="post" enctype="text/plain">
-              <div class="two">
-                <div>
-                  <label for="nome">Nome</label>
-                  <input id="nome" name="Nome" autocomplete="name" placeholder="O seu nome" required />
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input id="email" name="Email" type="email" autocomplete="email" placeholder="email@empresa.pt" required />
-                </div>
-              </div>
-
-              <div class="two">
-                <div>
-                  <label for="tipo">Tipo de evento</label>
-                  <select id="tipo" name="Tipo de evento" required>
-                    <option value="" selected disabled>Selecione…</option>
-                    <option>Team Building (Empresa)</option>
-                    <option>Casamento Medieval</option>
-                    <option>Município / Feira</option>
-                    <option>Evento Privado Premium</option>
-                    <option>Outro</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="pessoas">Nº de participantes</label>
-                  <input id="pessoas" name="Participantes" inputmode="numeric" placeholder="Ex.: 25" />
-                </div>
-              </div>
-
-              <div class="two">
-                <div>
-                  <label for="local">Local</label>
-                  <input id="local" name="Local" placeholder="Cidade / Espaço" />
-                </div>
-                <div>
-                  <label for="data">Data (aprox.)</label>
-                  <input id="data" name="Data" placeholder="Ex.: Maio 2026" />
-                </div>
-              </div>
-
-              <div>
-                <label for="msg">Mensagem</label>
-                <textarea id="msg" name="Mensagem" placeholder="Conte-nos o objetivo do evento e o que imagina…"></textarea>
-              </div>
-
-              <button class="btn primary" type="submit">Enviar pedido</button>
-
-              <div class="fine">
-                Dica: para GitHub Pages, um passo seguinte “sem backend” é usar Formspree ou Google Forms embutido.
-              </div>
-            </form>
-          </div>
-
-          <div class="panel">
-            <h3>Contacto direto</h3>
-            <p class="muted" style="margin-top:0">
-              Preferes falar já? Usa os contactos abaixo (substitui pelos reais quando estiverem prontos).
-            </p>
-
-            <div class="divider" aria-hidden="true"></div>
-
-            <p style="margin:0"><b>Email:</b> <span class="muted">contacto@lusitaniamedieval.pt</span></p>
-            <p style="margin:8px 0 0"><b>Telefone:</b> <span class="muted">+351 9xx xxx xxx</span></p>
-            <p style="margin:8px 0 0"><b>Zona:</b> <span class="muted">Portugal</span></p>
-
-            <div class="divider" aria-hidden="true"></div>
-
-            <h3 style="margin-top:0">Promessa</h3>
-            <ul class="check">
-              <li><span class="badge">✓</span>Proposta clara (objetivos, duração, logística e segurança).</li>
-              <li><span class="badge">✓</span>Formato modular ajustado ao vosso público.</li>
-              <li><span class="badge">✓</span>Experiência premium e memorável.</li>
-            </ul>
-
-            <div class="topgap">
-              <a class="btn" href="#servicos">Ver serviços</a>
-              <a class="btn primary" href="#top">Voltar ao topo</a>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Autenticidade e impacto visual. Foi o destaque do evento e o público ficou rendido."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>Vereador Cultura • Município</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section>
-      <div class="wrap">
-        <div class="panel center">
-          <span class="pill">Pronto para a conquista?</span>
-          <h2 style="font-family:Cinzel,serif; margin:12px 0 8px; letter-spacing:.03em">
-            Está pronto para reunir o seu clã?
-          </h2>
-          <p class="muted" style="margin:0 0 18px">
-            Diga-nos o objetivo e o número de participantes. Nós tratamos do resto.
-          </p>
-          <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap">
-            <a class="btn primary" href="#contacto">Falar connosco</a>
-            <a class="btn" href="#empresas">Ver opção para empresas</a>
+    <!-- Contacto Section -->
+    <section id="contacto" class="section section-dark">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">Vamos Criar<br>Algo Épico</h2>
+            <p class="lead">Envie-nos os detalhes do seu evento e respondemos com uma proposta personalizada.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <strong>Email</strong>
+                <span>contacto@lusitaniamedieval.pt</span>
+              </div>
+              <div class="contact-item">
+                <strong>Telefone</strong>
+                <span>+351 9XX XXX XXX</span>
+              </div>
+              <div class="contact-item">
+                <strong>Localização</strong>
+                <span>Portugal</span>
+              </div>
+            </div>
           </div>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tipo">Tipo de Evento</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="">Selecione...</option>
+                  <option value="team-building">Team Building</option>
+                  <option value="casamento">Casamento</option>
+                  <option value="municipio">Município / Feira</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="participantes">Nº Participantes</label>
+                <input type="text" id="participantes" name="participantes" placeholder="Ex: 50">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o seu evento..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Pedido</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <div>
-          <div style="display:flex;align-items:center;gap:10px">
-            <div class="mark" aria-hidden="true" style="width:34px;height:34px;border-radius:12px"></div>
-            <div>
-              <div style="font-family:Cinzel,serif;letter-spacing:.06em">LUSITANIA MEDIEVAL</div>
-              <div class="muted" style="font-size:12px">Experiências medievais imersivas • Portugal</div>
-            </div>
-          </div>
-          <div class="fine">© <span id="year"></span> Lusitania Medieval. Todos os direitos reservados.</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="footer-logo">
+          <p>Experiências medievais imersivas em Portugal. Team building, casamentos e eventos com autoridade histórica.</p>
         </div>
-
-        <div>
-          <div style="font-weight:700;letter-spacing:.06em; text-transform:uppercase; font-size:12px; color: var(--muted2)">Links</div>
-          <div style="display:grid; gap:8px; margin-top:10px">
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#empresas">Empresas</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contacto">Contacto</a>
-          </div>
+        
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#contacto">Contacto</a>
         </div>
-
-        <div>
-          <div style="font-weight:700;letter-spacing:.06em; text-transform:uppercase; font-size:12px; color: var(--muted2)">Redes</div>
-          <div style="display:grid; gap:8px; margin-top:10px">
-            <a href="#" aria-label="Instagram (placeholder)">Instagram</a>
-            <a href="#" aria-label="TikTok (placeholder)">TikTok</a>
-            <a href="#" aria-label="LinkedIn (placeholder)">LinkedIn</a>
-          </div>
+        
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <a href="#servicos">Team Building</a>
+          <a href="#servicos">Casamentos</a>
+          <a href="#servicos">Municípios</a>
         </div>
+        
+        <div class="footer-links">
+          <h4>Redes Sociais</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Lusitania Medieval. Todos os direitos reservados.</p>
+        <p class="footer-tagline">Experiência. Honra. Estratégia.</p>
       </div>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
   <script>
-    // Mobile menu toggle
-    const btn = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
-
-    function closeMobileNav(){
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-
-    btn?.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    // Close mobile nav after clicking a link
-    nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
-
-    // Current year
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Optional: slightly improve mailto by building the body (keeps it simple)
-    const form = document.getElementById('leadForm');
-    form?.addEventListener('submit', (e) => {
-      // Let mailto open, but compose a nicer body when possible.
-      // Some mail clients ignore this; it's fine for a first version.
-      const nome = document.getElementById('nome')?.value || '';
-      const email = document.getElementById('email')?.value || '';
-      const tipo = document.getElementById('tipo')?.value || '';
-      const pessoas = document.getElementById('pessoas')?.value || '';
-      const local = document.getElementById('local')?.value || '';
-      const data = document.getElementById('data')?.value || '';
-      const msg = document.getElementById('msg')?.value || '';
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
 
-      const subject = encodeURIComponent(`[Pedido de Proposta] ${tipo || 'Evento'} — ${nome}`);
-      const body = encodeURIComponent(
-`Nome: ${nome}
-Email: ${email}
-Tipo: ${tipo}
-Participantes: ${pessoas}
-Local: ${local}
-Data: ${data}
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
 
-Mensagem:
-${msg}
-`);
-      // Replace action dynamically (keep your official email here)
-      const to = "contacto@lusitaniamedieval.pt";
-      form.setAttribute('action', `mailto:${to}?subject=${subject}&body=${body}`);
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     });
   </script>
 </body>
