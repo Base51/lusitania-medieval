@@ -1,44 +1,195 @@
-# Operações - Lusitânia Medieval
+# 🏰 Operações — Lusitania Medieval
 
-## Estrutura Organizacional
+---
 
-<!-- Organigrama e estrutura -->
+# 1. Estrutura Operacional
 
-## Equipa
+Modelo inicial (Lean):
 
-### Equipa Nuclear
-<!-- Membros da equipa principal -->
+- Núcleo fixo: 4 integrantes
+- Colaboradores adicionais por evento
+- Estrutura modular e escalável
 
-### Colaboradores
-<!-- Outros colaboradores -->
+Objetivo:
+Manter custos controlados sem comprometer qualidade e segurança.
 
-## Localização
+---
 
-<!-- Local de operações -->
+# 2. Estrutura da Equipa
 
-## Equipamentos
+## 2.1 Núcleo Principal (4 membros)
 
-<!-- Lista de equipamentos necessários -->
+Funções base (podem acumular):
 
-## Processos Operacionais
+1. Diretor Estratégico / Comercial
+   - Propostas
+   - Relação com clientes
+   - Parcerias
+   - Decisões estratégicas
 
-### Planeamento de Eventos
-<!-- Processo de planeamento -->
+2. Diretor Operacional
+   - Planeamento logístico
+   - Gestão de equipa no terreno
+   - Execução de evento
 
-### Produção
-<!-- Processo de produção -->
+3. Responsável de Segurança
+   - Protocolos de combate
+   - Briefing obrigatório
+   - Supervisão de equipamento
 
-### Logística
-<!-- Processo logístico -->
+4. Produção & Experiência
+   - Narrativa do evento
+   - Ambientação
+   - Gestão de ritmo
 
-## Fornecedores
+---
 
-<!-- Lista de fornecedores-chave -->
+# 3. Processo Padrão de Evento
 
-## Gestão da Qualidade
+## 3.1 Pré-Evento
 
-<!-- Processos de controlo de qualidade -->
+- Reunião com cliente
+- Definição de objetivos
+- Visita técnica ao local (se necessário)
+- Definição de número de participantes
+- Planeamento logístico
+- Preparação de equipamento
+- Confirmação de seguro
 
-## Cronograma Operacional
+Checklist:
+- Contrato assinado
+- Pagamento sinal
+- Data confirmada
+- Briefing interno realizado
 
-<!-- Timeline de operações -->
+---
+
+## 3.2 Dia do Evento
+
+1. Chegada antecipada
+2. Montagem de área
+3. Verificação de segurança
+4. Briefing aos participantes
+5. Formação de clãs
+6. Execução das atividades
+7. Desafio final
+8. Encerramento
+9. Feedback rápido
+
+---
+
+## 3.3 Pós-Evento
+
+- Desmontagem
+- Verificação de equipamento
+- Follow-up com cliente
+- Pedido de testemunho
+- Registo fotográfico e vídeo
+- Avaliação interna
+
+---
+
+# 4. Protocolos de Segurança
+
+Segurança é prioridade absoluta.
+
+Obrigatório:
+
+- Briefing inicial
+- Demonstração técnica
+- Equipamento adequado
+- Supervisão constante
+- Proibição de ações não autorizadas
+- Limitação de intensidade conforme público
+
+Nunca:
+- Permitir combate real sem supervisão
+- Trabalhar sem seguro
+- Improvisar em contexto de risco
+
+---
+
+# 5. Logística
+
+## Transporte
+- Veículo adaptado
+- Checklist de carregamento
+- Planeamento de tempos
+
+## Armazenamento
+- Espaço seco e organizado
+- Inventário atualizado
+- Separação por categorias
+
+## Inventário Base
+- Espadas de treino
+- Escudos
+- Proteções
+- Figurinos
+- Bandeiras
+- Material cenográfico
+
+---
+
+# 6. Gestão de Risco
+
+Principais riscos:
+
+1. Lesões
+2. Atrasos logísticos
+3. Clima adverso
+4. Falhas técnicas
+5. Cancelamentos
+
+Mitigação:
+
+- Seguro ativo
+- Plano B para local
+- Margem de tempo
+- Contratos claros
+- Comunicação estruturada
+
+---
+
+# 7. Escalabilidade Operacional
+
+Objetivo futuro:
+
+- Manual interno completo
+- Treino de novos membros
+- Padronização de eventos
+- Modelo replicável
+- Possibilidade de franquia
+
+---
+
+# 8. Indicadores Operacionais
+
+- Pontualidade
+- Incidentes por evento
+- Avaliação do cliente
+- Tempo de montagem
+- Margem operacional
+
+---
+
+# 9. Cultura Interna
+
+A equipa deve refletir os valores da marca:
+
+- Disciplina
+- Profissionalismo
+- Espírito de clã
+- Responsabilidade
+- Excelência
+
+---
+
+# 10. Diretriz Final
+
+Operações devem sempre:
+
+- Garantir segurança
+- Reforçar experiência premium
+- Proteger reputação da marca
+- Permitir crescimento sustentável
