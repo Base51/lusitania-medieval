@@ -1,72 +1,431 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-PT">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lusitania Medieval</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Lusitania Medieval — experiências medievais imersivas em Portugal para empresas, casamentos e eventos públicos." />
+  <title>Lusitania Medieval — Experiências Medievais Imersivas</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lusitania Medieval — Experiências Medievais Imersivas" />
+  <meta property="og:description" content="Team building, casamentos e eventos medievais com autoridade histórica, profissionalismo e segurança." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Lusitania Medieval</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="logo-img">
+      </a>
+      
+      <nav class="nav">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#portfolio" class="nav-link">Portfólio</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#sobre" class="mobile-nav-link">Sobre</a>
+    <a href="#servicos" class="mobile-nav-link">Serviços</a>
+    <a href="#portfolio" class="mobile-nav-link">Portfólio</a>
+    <a href="#contacto" class="mobile-nav-link">Contacto</a>
+    <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="assets/img/hero/hero-main.webp" alt="Lusitania Medieval - Experiências Medievais">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag">Experiências Medievais Imersivas</span>
+        <h1 class="hero-title">Desperte o Espírito<br>do seu Clã</h1>
+        <p class="hero-subtitle">Team building, casamentos e eventos com autoridade histórica, profissionalismo e segurança em Portugal.</p>
+        <div class="hero-cta">
+          <a href="#contacto" class="btn btn-primary btn-lg">Pedir Proposta</a>
+          <a href="#servicos" class="btn btn-outline btn-lg">Conhecer Serviços</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Explorar</span>
+        <div class="scroll-indicator"></div>
+      </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Quem Somos</span>
+          <h2 class="section-title">Autenticidade.<br>Profissionalismo.<br>Impacto.</h2>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead">Não fazemos animação medieval comum. Criamos experiências imersivas, estratégicas e seguras — com foco na Idade Média Ibérica e na valorização cultural portuguesa.</p>
+            <p>A Lusitania Medieval nasceu da paixão pela recriação histórica e da vontade de oferecer algo verdadeiramente diferenciador ao mercado corporativo e de eventos em Portugal.</p>
+            <p>Combinamos rigor histórico, produção cinematográfica e protocolos de segurança para criar momentos que transformam equipas e celebram ocasiões especiais.</p>
+          </div>
+          
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">⚔️</div>
+              <h3>Autenticidade</h3>
+              <p>Inspiração na Idade Média Ibérica, sem fantasia exagerada.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🛡️</div>
+              <h3>Segurança</h3>
+              <p>Protocolos rigorosos e equipamento certificado.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🏰</div>
+              <h3>Imersão</h3>
+              <p>Narrativa envolvente e produção de excelência.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">👑</div>
+              <h3>Premium</h3>
+              <p>Estética cinematográfica e atenção ao detalhe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="section section-dark">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="section-tag">O Que Fazemos</span>
+          <h2 class="section-title">Serviços</h2>
+          <p class="section-subtitle">Experiências memoráveis para cada ocasião</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-tag">B2B • Prioridade</div>
+            <h3>Team Building Medieval</h3>
+            <p>Formação de clãs, desafios estratégicos e combate supervisionado. Uma experiência que melhora coesão, comunicação e liderança.</p>
+            <ul class="service-features">
+              <li>Grupos de 10 a 200+ participantes</li>
+              <li>Atividades moduláveis</li>
+              <li>Debrief com ligação a competências</li>
             </ul>
-        </nav>
-    </header>
-    <section id="hero">
-        <h2>Your Adventure Awaits</h2>
-        <p>Join us for an unforgettable experience!</p>
+            <a href="#contacto" class="btn btn-outline">Saber Mais →</a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-tag">Privado</div>
+            <h3>Casamentos Medievais</h3>
+            <p>Cerimónias temáticas, cortejo, ambientação histórica e momentos épicos para um dia verdadeiramente único.</p>
+            <ul class="service-features">
+              <li>Cerimónia personalizada</li>
+              <li>Figurantes e animação</li>
+              <li>Decoração e adereços</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Pedir Orçamento →</a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-tag">Público</div>
+            <h3>Municípios & Feiras</h3>
+            <p>Recriações históricas, torneios e animação estruturada para dinamização cultural e turística.</p>
+            <ul class="service-features">
+              <li>Produção completa</li>
+              <li>Torneios e espetáculos</li>
+              <li>Adequado a grandes públicos</li>
+            </ul>
+            <a href="#contacto" class="btn btn-outline">Pedir Proposta →</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing you with the best medieval experience.</p>
+
+    <!-- Portfólio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfólio</span>
+          <h2 class="section-title">Galeria</h2>
+        </div>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item portfolio-large">
+            <div class="portfolio-placeholder">
+              <span>Imagem Principal</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Team Building</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Casamentos</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Eventos</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-placeholder">
+              <span>Torneios</span>
+            </div>
+          </div>
+        </div>
+        
+        <p class="portfolio-note">Alguns dos eventos realizados!</p>
+      </div>
     </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Medieval Tours</li>
-            <li>Workshops</li>
-            <li>Historical Reenactments</li>
-        </ul>
+
+    <!-- Testemunhos Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="section-tag">Testemunhos</span>
+          <h2 class="section-title">O Que Dizem de Nós</h2>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Uma experiência fora do comum — elevou a energia da equipa e criou ligação imediata."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>Diretor RH • Empresa</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Organização impecável. Segurança clara. O formato é memorável e muito bem conduzido."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>CEO • Empresa</span>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Autenticidade e impacto visual. Foi o destaque do evento e o público ficou rendido."</p>
+            <div class="testimonial-author">
+              <strong>Nome Apelido</strong>
+              <span>Vereador Cultura • Município</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <img src="participantes1.jpg" alt="Participantes 1">
-        <img src="apresentacao.jpg" alt="Apresentacao">
-        <img src="participantes2.jpg" alt="Participantes 2">
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section section-dark">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">Vamos Criar<br>Algo Épico</h2>
+            <p class="lead">Envie-nos os detalhes do seu evento e respondemos com uma proposta personalizada.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <strong>Email</strong>
+                <span>contacto@lusitaniamedieval.pt</span>
+              </div>
+              <div class="contact-item">
+                <strong>Telefone</strong>
+                <span>+351 9XX XXX XXX</span>
+              </div>
+              <div class="contact-item">
+                <strong>Localização</strong>
+                <span>Portugal</span>
+              </div>
+            </div>
+          </div>
+          
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tipo">Tipo de Evento</label>
+                <select id="tipo" name="tipo" required>
+                  <option value="">Selecione...</option>
+                  <option value="team-building">Team Building</option>
+                  <option value="casamento">Casamento</option>
+                  <option value="municipio">Município / Feira</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="participantes">Nº Participantes</label>
+                <input type="text" id="participantes" name="participantes" placeholder="Ex: 50">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o seu evento..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Pedido</button>
+          </form>
+        </div>
+      </div>
     </section>
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <blockquote>
-            <p>Carlos M.: "It was an amazing experience!"</p>
-        </blockquote>
-        <blockquote>
-            <p>Sofia S.: "I loved every moment of it!"</p>
-        </blockquote>
-        <blockquote>
-            <p>João O.: "A journey through time!"</p>
-        </blockquote>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2026 Lusitania Medieval. All Rights Reserved.</p>
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="footer-logo">
+          <p>Experiências medievais imersivas em Portugal. Team building, casamentos e eventos com autoridade histórica.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <a href="#servicos">Team Building</a>
+          <a href="#servicos">Casamentos</a>
+          <a href="#servicos">Municípios</a>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Redes Sociais</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Lusitania Medieval. Todos os direitos reservados.</p>
+        <p class="footer-tagline">Experiência. Honra. Estratégia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Form submission via AJAX
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'A enviar...';
+      submitBtn.disabled = true;
+      
+      // Remove previous messages
+      const oldMsg = contactForm.querySelector('.form-message');
+      if (oldMsg) oldMsg.remove();
+      
+      const formData = new FormData(contactForm);
+      
+      try {
+        const response = await fetch('https://formspree.io/f/xvzbkdvd', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Success message
+          const successMsg = document.createElement('div');
+          successMsg.className = 'form-message form-success';
+          successMsg.innerHTML = '<strong>Mensagem enviada com sucesso!</strong><br>Entraremos em contacto brevemente.';
+          successMsg.style.cssText = 'background: rgba(201, 169, 98, 0.15); border: 1px solid var(--color-gold); color: var(--color-gold); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;';
+          contactForm.insertBefore(successMsg, contactForm.firstChild);
+          contactForm.reset();
+        } else {
+          throw new Error('Erro no envio');
+        }
+      } catch (error) {
+        // Error message
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'form-message form-error';
+        errorMsg.innerHTML = '<strong>Erro ao enviar.</strong><br>Por favor tente novamente ou contacte-nos diretamente.';
+        errorMsg.style.cssText = 'background: rgba(255, 90, 90, 0.15); border: 1px solid #ff5a5a; color: #ff5a5a; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;';
+        contactForm.insertBefore(errorMsg, contactForm.firstChild);
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
