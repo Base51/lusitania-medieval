@@ -13,6 +13,37 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="logo-img">
+      </a>
+
+      <nav class="nav">
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#portfolio" class="nav-link">Portfólio</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <a href="index.html#contacto" class="btn btn-primary">Pedir Proposta</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#sobre" class="mobile-nav-link">Sobre</a>
+    <a href="index.html#servicos" class="mobile-nav-link">Serviços</a>
+    <a href="index.html#portfolio" class="mobile-nav-link">Portfólio</a>
+    <a href="index.html#contacto" class="mobile-nav-link">Contacto</a>
+    <a href="index.html#contacto" class="btn btn-primary">Pedir Proposta</a>
+  </div>
+
   <main class="legal-page">
     <div class="legal-wrap">
       <header class="legal-header">
@@ -75,5 +106,83 @@
       </div>
     </div>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="footer-logo">
+          <p>Experiências medievais imersivas em Portugal. Team building, casamentos e eventos com autoridade histórica.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <a href="index.html#sobre">Sobre</a>
+          <a href="index.html#servicos">Serviços</a>
+          <a href="index.html#portfolio">Portfólio</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <a href="index.html#servicos">Team Building</a>
+          <a href="index.html#servicos">Casamentos</a>
+          <a href="index.html#servicos">Municípios</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Redes Sociais</h4>
+          <a href="https://www.instagram.com/lusitania.medieval" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Lusitania Medieval. Todos os direitos reservados.</p>
+        <p class="footer-legal-links">
+          <a href="termos-condicoes.html">Termos e Condições</a>
+          <span aria-hidden="true">|</span>
+          <a href="livro-reclamacoes.html">Livro de Reclamações</a>
+          <span aria-hidden="true">|</span>
+          <a href="politica-privacidade.html">Política de Privacidade</a>
+        </p>
+        <p class="footer-tagline">Experiência. Honra. Estratégia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          mobileNav.classList.remove('active');
+          document.body.classList.remove('menu-open');
+        });
+      });
+    }
+
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (!header) return;
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
