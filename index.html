@@ -294,7 +294,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="+351 912 345 678" pattern="\+[1-9][0-9\s()-]{7,19}" title="Inclua o indicativo do país, por exemplo +351 912 345 678." required>
+                <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="+351 912 345 678" pattern="[\+0-9\s()-]{8,22}" title="Inclua o indicativo do país, por exemplo +351 912 345 678." required>
                 <small class="form-help">Inclua o indicativo do país, por exemplo +351 912 345 678.</small>
               </div>
             </div>
@@ -427,6 +427,12 @@
 
       if (normalizedTelefone.startsWith('00')) {
         normalizedTelefone = `+${normalizedTelefone.slice(2)}`;
+      } else if (/^351\d{9}$/.test(normalizedTelefone)) {
+        normalizedTelefone = `+${normalizedTelefone}`;
+      } else if (/^\d{9}$/.test(normalizedTelefone)) {
+        normalizedTelefone = `+351${normalizedTelefone}`;
+      } else if (/^0\d{9}$/.test(normalizedTelefone)) {
+        normalizedTelefone = `+351${normalizedTelefone.slice(1)}`;
       }
 
       if (!/^\+[1-9]\d{7,14}$/.test(normalizedTelefone)) {
