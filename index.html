@@ -294,7 +294,8 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="+351 912 345 678" pattern="\+[1-9][0-9\s()-]{7,19}" title="Inclua o indicativo do país, por exemplo +351 912 345 678." required>
+                <small class="form-help">Inclua o indicativo do país, por exemplo +351 912 345 678.</small>
               </div>
             </div>
             <div class="form-row">
@@ -419,13 +420,33 @@
       if (oldMsg) oldMsg.remove();
       
       const formData = new FormData(contactForm);
+      const telefoneInput = contactForm.querySelector('#telefone');
+
+      let normalizedTelefone = String(formData.get('telefone') || '').trim()
+        .replace(/[\s()-]/g, '');
+
+      if (normalizedTelefone.startsWith('00')) {
+        normalizedTelefone = `+${normalizedTelefone.slice(2)}`;
+      }
+
+      if (!/^\+[1-9]\d{7,14}$/.test(normalizedTelefone)) {
+        telefoneInput.setCustomValidity('Introduza o telefone com indicativo do país, por exemplo +351 912 345 678.');
+        telefoneInput.reportValidity();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        return;
+      }
+
+      telefoneInput.setCustomValidity('');
+      telefoneInput.value = normalizedTelefone;
+      formData.set('telefone', normalizedTelefone);
 
       try {
-        // Build plain-object payload for Zapier (JSON)
+        // Build plain-object payload for Make (JSON)
         const payload = {
           nome:          formData.get('nome')          || '',
           email:         formData.get('email')         || '',
-          telefone:      formData.get('telefone')      || '',
+          telefone:      normalizedTelefone,
           tipo:          formData.get('tipo')          || '',
           participantes: formData.get('participantes') || 'Não especificado',
           mensagem:      formData.get('mensagem')      || 'Sem mensagem adicional'

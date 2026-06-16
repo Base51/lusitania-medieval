@@ -723,6 +723,13 @@ a {
   min-height: 120px;
 }
 
+.form-help {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-subtle);
+}
+
 /* ============================================
    Footer
    ============================================ */
