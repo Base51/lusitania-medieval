@@ -23,19 +23,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Lusitania Medieval",
-    "url": "https://lusitaniamedieval.com/",
-    "logo": "https://lusitaniamedieval.com/assets/img/brand/logo_light_theme.png",
-    "email": "info@lusitaniamedieval.pt",
-    "areaServed": [
-      { "@type": "City", "name": "Lisboa" },
-      { "@type": "City", "name": "Loures" },
-      { "@type": "Country", "name": "Portugal" }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/lusitania.medieval",
-      "https://www.linkedin.com/company/lusitania-medieval"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://lusitaniamedieval.com/#organization",
+        "name": "Lusitania Medieval",
+        "url": "https://lusitaniamedieval.com/",
+        "logo": "https://lusitaniamedieval.com/assets/img/brand/logo_light_theme.png",
+        "email": "info@lusitaniamedieval.pt",
+        "areaServed": [
+          { "@type": "City", "name": "Lisboa" },
+          { "@type": "City", "name": "Loures" },
+          { "@type": "Country", "name": "Portugal" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/lusitania.medieval",
+          "https://www.linkedin.com/company/lusitania-medieval"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://lusitaniamedieval.com/#localbusiness",
+        "name": "Lusitania Medieval",
+        "url": "https://lusitaniamedieval.com/",
+        "image": "https://lusitaniamedieval.com/assets/img/brand/logo_light_theme.png",
+        "priceRange": "$$$",
+        "parentOrganization": {
+          "@id": "https://lusitaniamedieval.com/#organization"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bobadela",
+          "addressLocality": "Loures",
+          "addressRegion": "Lisboa",
+          "postalCode": "2695-032",
+          "addressCountry": "PT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.8,
+          "longitude": -9.1
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Portugal"
+        }
+      }
     ]
   }
   </script>
