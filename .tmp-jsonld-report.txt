@@ -1,0 +1,11 @@
+404.html: no JSON-LD blocks
+casamentos.html: JSON-LD block 1 OK
+casamentos.html: JSON-LD block 2 OK
+eventos.html: JSON-LD block 1 OK
+eventos.html: JSON-LD block 2 OK
+index.html: JSON-LD block 1 OK
+livro-reclamacoes.html: no JSON-LD blocks
+politica-privacidade.html: no JSON-LD blocks
+team-building.html: JSON-LD block 1 OK
+team-building.html: JSON-LD block 2 OK
+termos-condicoes.html: no JSON-LD blocks
