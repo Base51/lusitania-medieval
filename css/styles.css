@@ -925,6 +925,12 @@ a {
   padding: 0 0 var(--space-xl);
 }
 
+.service-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
 .service-feature-image {
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -970,6 +976,16 @@ a {
 
 .service-content-card p + p {
   margin-top: var(--space-md);
+}
+
+.service-content-card ul {
+  margin: var(--space-sm) 0 0;
+  padding-left: 1.2rem;
+}
+
+.service-content-card li {
+  margin-top: var(--space-sm);
+  color: var(--color-text-muted);
 }
 
 .service-highlight-card {
@@ -1018,6 +1034,10 @@ a {
   }
 
   .service-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-feature-grid {
     grid-template-columns: 1fr;
   }
 }
