@@ -823,6 +823,72 @@ a {
 }
 
 /* ============================================
+   Cookie Consent
+   ============================================ */
+.cookie-banner {
+  position: fixed;
+  right: var(--space-md);
+  bottom: var(--space-md);
+  width: min(460px, calc(100vw - 2rem));
+  padding: var(--space-md);
+  background: rgba(5, 5, 4, 0.98);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  z-index: 1200;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.cookie-banner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.cookie-banner p strong {
+  color: var(--color-text);
+}
+
+.cookie-banner-actions {
+  margin-top: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.cookie-manage-btn {
+  position: fixed;
+  left: var(--space-md);
+  bottom: var(--space-md);
+  z-index: 1190;
+  padding: 0.65rem 0.9rem;
+  background: rgba(5, 5, 4, 0.92);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cookie-manage-btn:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+/* ============================================
    Legal Pages
    ============================================ */
 .legal-page {
@@ -1106,6 +1172,18 @@ a {
 
   .service-content-card {
     padding: var(--space-lg);
+  }
+
+  .cookie-banner {
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: calc(var(--space-sm) + 2.25rem);
+    width: auto;
+  }
+
+  .cookie-manage-btn {
+    left: var(--space-sm);
+    bottom: var(--space-sm);
   }
 }
 

@@ -17,8 +17,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-KWH7E5N39M');
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    window.LM_GA_ID = 'G-KWH7E5N39M';
   </script>
 </head>
 <body>
@@ -146,6 +151,7 @@
     </div>
   </footer>
 
+  <script src="js/cookie-consent.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 

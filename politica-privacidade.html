@@ -17,8 +17,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-KWH7E5N39M');
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    window.LM_GA_ID = 'G-KWH7E5N39M';
   </script>
 </head>
 <body>
@@ -109,6 +114,13 @@
           <h2>8. Alterações à Política</h2>
           <p>Esta Política de Privacidade pode ser atualizada a qualquer momento. A versão em vigor é a publicada nesta página.</p>
         </section>
+
+        <section>
+          <h2>9. Cookies</h2>
+          <p>Este website utiliza cookies analíticos (Google Analytics) apenas mediante consentimento prévio do utilizador. Por defeito, estes cookies estão desativados.</p>
+          <p>Ao aceitar no banner de cookies, ativa a medição estatística para melhoria do website. Ao rejeitar, a navegação mantém-se disponível sem rastreamento analítico.</p>
+          <p>Pode alterar a sua escolha a qualquer momento através do botão "Cookies" visível no site.</p>
+        </section>
       </article>
 
       <div class="legal-actions">
@@ -165,6 +177,7 @@
     </div>
   </footer>
 
+  <script src="js/cookie-consent.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
