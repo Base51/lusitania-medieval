@@ -1,32 +1,76 @@
 # Lusitânia Medieval
 
-> Recriação histórica e eventos medievais em Portugal
+> Experiências medievais imersivas em Portugal para empresas, casamentos e eventos.
 
-## 📖 Sobre
+## Sobre
 
-Lusitânia Medieval é um projeto dedicado à recriação histórica do período medieval em Portugal, promovendo eventos, espetáculos e atividades culturais.
+Website institucional da Lusitania Medieval com foco em:
 
-## 🚀 Início Rápido
+- Team Building corporativo
+- Casamentos medievais
+- Feiras e eventos
 
-1. Clone o repositório
-2. Abra `index.html` no browser
+O projeto privilegia posicionamento premium, SEO técnico e desempenho em mobile.
 
-## 📁 Estrutura do Projeto
+## Início Rápido
 
+### Opção 1: servidor com Node (recomendado)
+
+```bash
+npx --yes http-server . -p 5500 -c-1
 ```
+
+### Opção 2: servidor com Python
+
+```bash
+python -m http.server 5500
+```
+
+Depois, abrir `http://localhost:5500`.
+
+## Páginas Principais
+
+- `index.html` (home)
+- `team-building.html`
+- `casamentos.html`
+- `eventos.html`
+- `politica-privacidade.html`
+- `termos-condicoes.html`
+- `livro-reclamacoes.html`
+- `404.html`
+
+## Estrutura do Projeto
+
+```text
 lusitania-medieval/
-├── assets/          # Recursos (imagens, ícones, fontes, vídeos)
-├── css/             # Estilos CSS
-├── js/              # JavaScript
-├── docs/            # Documentação do projeto
-├── .github/         # Templates GitHub
-├── index.html       # Página principal
-└── 404.html         # Página de erro
+├── assets/          # Imagens, ícones, fontes, vídeo
+├── css/             # Estilos globais
+├── js/              # Scripts (interações + consentimento cookies)
+├── docs/            # Documentação estratégica e técnica
+├── robots.txt       # Regras de rastreamento
+├── sitemap.xml      # Mapa do site
+├── index.html
+└── 404.html
 ```
 
-## 📚 Documentação
+## Estado Técnico Atual
 
-Consulte a pasta `docs/` para documentação completa:
+- Metadados SEO base implementados (title, description, canonical, OG, Twitter)
+- Dados estruturados JSON-LD nas páginas principais
+- Consent mode + banner de cookies com controlo de analytics
+- `robots.txt` e `sitemap.xml` publicados
+- `loading` e `decoding` aplicados nas imagens
+
+## Próximas Melhorias Prioritárias
+
+1. Converter imagens legadas `.png/.jpg` de portfólio para `.webp`
+2. Atualizar caminhos das imagens no HTML após conversão
+3. Definir `width` e `height` nas imagens principais para reduzir CLS
+4. Executar auditoria Lighthouse mobile e corrigir pontos críticos
+
+## Documentação
+
+Consultar a pasta `docs/`:
 
 - [Identidade](docs/01_identidade.md)
 - [Modelo de Negócio](docs/02_modelo_negocio.md)
@@ -34,20 +78,9 @@ Consulte a pasta `docs/` para documentação completa:
 - [Marketing](docs/04_marketing.md)
 - [Operações](docs/05_operacoes.md)
 - [Candidaturas](docs/06_candidaturas.md)
+- [Website Técnico e SEO](docs/07_website_tecnico.md)
 - [Documento Mestre](docs/Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md)
 
-## 🤝 Contribuições
+## Licença
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/nova-funcionalidade`)
-3. Commit as alterações (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT - veja o ficheiro [LICENSE](LICENSE) para detalhes.
-
-## 📧 Contacto
-
-Para mais informações, contacte-nos através do site.
+Este projeto está licenciado sob a licença MIT. Consulte [LICENSE](LICENSE).

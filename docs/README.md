@@ -74,6 +74,15 @@ Base para apoios e fundos:
 
 ---
 
+## 07_website_tecnico.md
+Guia técnico do website e SEO:
+- Estado atual do site
+- Implementações técnicas já concluídas
+- Backlog de performance e SEO
+- Checklist operacional para validação
+
+---
+
 ## Documento Mestre Completo
 
 **Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md**
