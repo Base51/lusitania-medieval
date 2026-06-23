@@ -10,6 +10,12 @@
     }
   }
 
+  function fbqSafe() {
+    if (typeof window.fbq === 'function') {
+      window.fbq.apply(null, arguments);
+    }
+  }
+
   function consentGranted() {
     return {
       ad_storage: 'denied',
@@ -31,10 +37,12 @@
   function applyGranted() {
     gtagSafe('consent', 'update', consentGranted());
     gtagSafe('config', GA_ID, { anonymize_ip: true });
+    fbqSafe('consent', 'grant');
   }
 
   function applyDenied() {
     gtagSafe('consent', 'update', consentDenied());
+    fbqSafe('consent', 'revoke');
   }
 
   function saveChoice(value) {
