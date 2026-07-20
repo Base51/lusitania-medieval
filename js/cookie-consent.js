@@ -3,6 +3,7 @@
 
   var CONSENT_KEY = 'lm_cookie_consent_v1';
   var GA_ID = window.LM_GA_ID || 'G-KWH7E5N39M';
+  var ADS_ID = window.LM_ADS_ID || 'AW-1010499385';
 
   function gtagSafe() {
     if (typeof window.gtag === 'function') {
@@ -18,9 +19,9 @@
 
   function consentGranted() {
     return {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
       analytics_storage: 'granted'
     };
   }
@@ -37,6 +38,7 @@
   function applyGranted() {
     gtagSafe('consent', 'update', consentGranted());
     gtagSafe('config', GA_ID, { anonymize_ip: true });
+    gtagSafe('config', ADS_ID);
     fbqSafe('consent', 'grant');
   }
 
@@ -68,7 +70,7 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
     banner.innerHTML =
-      '<p><strong>Privacidade e Cookies</strong><br>Usamos cookies analíticos para melhorar a sua experiência. Pode aceitar ou rejeitar estes cookies.</p>' +
+      '<p><strong>Privacidade e Cookies</strong><br>Usamos cookies analiticos e de publicidade para melhorar a sua experiencia. Pode aceitar ou rejeitar estes cookies.</p>' +
       '<div class="cookie-banner-actions">' +
       '  <button type="button" class="btn btn-outline" id="cookieReject">Rejeitar</button>' +
       '  <button type="button" class="btn btn-primary" id="cookieAccept">Aceitar</button>' +

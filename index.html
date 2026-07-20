@@ -109,6 +109,8 @@
       analytics_storage: 'denied'
     });
     window.LM_GA_ID = 'G-KWH7E5N39M';
+    window.LM_ADS_ID = 'AW-1010499385';
+    gtag('config', window.LM_ADS_ID);
   </script>
 
   <!-- Meta Pixel -->
@@ -516,6 +518,25 @@
       }
     });
 
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          send_to: 'AW-1010499385/xjisCIbvv9McELn-6-ED',
+          event_callback: callback
+        });
+      } else {
+        callback();
+      }
+
+      return false;
+    }
+
     // Form submission via AJAX
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', async (e) => {
@@ -592,6 +613,7 @@
           successMsg.style.cssText = 'background: rgba(201, 169, 98, 0.15); border: 1px solid var(--color-gold); color: var(--color-gold); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center;';
           contactForm.insertBefore(successMsg, contactForm.firstChild);
           contactForm.reset();
+          gtag_report_conversion();
           if (typeof fbq === 'function') fbq('track', 'Lead');
         } else {
           throw new Error('Erro no envio');
