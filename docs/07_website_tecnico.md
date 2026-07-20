@@ -102,3 +102,15 @@ Sequencia sugerida para proxima iteracao:
 2. Atualizar caminhos no HTML
 3. Inserir width/height nas imagens criticas
 4. Rodar auditoria Lighthouse mobile e corrigir os 3 piores pontos
+
+## 7. QA Rapido para Lancamento de Campanha (Google Ads)
+
+Executar antes de ativar ou escalar campanhas:
+
+1. Abrir janela anonima e confirmar estado inicial de consentimento denied.
+2. Submeter o formulario com cookies rejeitados e validar que NAO existe evento de conversao Ads.
+3. Aceitar cookies, submeter o formulario com sucesso e validar 1 evento de conversao com send_to AW-1010499385/xjisCIbvv9McELn-6-ED.
+4. Repetir submissao valida e confirmar que nao ocorre disparo duplicado por uma unica submissao.
+5. Confirmar que o evento Meta Lead continua a disparar apenas no sucesso.
+6. Validar no Tag Assistant (ou DevTools Network) que nao existem erros de tag/consentimento.
+7. Fazer teste rapido em mobile e desktop para garantir que o fluxo de formulario nao regrediu.
