@@ -458,6 +458,10 @@ a {
   margin-bottom: var(--space-sm);
 }
 
+.about-actions {
+  margin-top: var(--space-lg);
+}
+
 .values-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
