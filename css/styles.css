@@ -797,6 +797,11 @@ a {
   color: var(--color-text-subtle);
 }
 
+.footer-company-meta {
+  margin-top: var(--space-xs);
+  letter-spacing: 0.04em;
+}
+
 .footer-legal-links {
   margin-top: var(--space-sm);
 }
