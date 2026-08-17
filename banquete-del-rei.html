@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inscrição no Banquete Del Rei, uma experiência medieval da Lusitania Medieval.">
+  <title>Banquete Del Rei | Inscrições | Lusitania Medieval</title>
+  <link rel="canonical" href="https://lusitaniamedieval.com/banquete-del-rei.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Banquete Del Rei | Lusitania Medieval">
+  <meta property="og:description" content="Reserve o seu lugar no Banquete Del Rei. Inscrições abertas até à lotação do evento.">
+  <meta property="og:url" content="https://lusitaniamedieval.com/banquete-del-rei.html">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="internal-page banquet-page">
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Lusitania Medieval - início">
+        <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="logo-img" width="890" height="272">
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="sobre-nos.html" class="nav-link">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link">Serviços</a>
+        <a href="index.html#portfolio" class="nav-link">Portfólio</a>
+        <a href="index.html#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <a href="#inscricao" class="btn btn-primary">Inscrever-me</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="sobre-nos.html" class="mobile-nav-link">Sobre Nós</a>
+    <a href="index.html#servicos" class="mobile-nav-link">Serviços</a>
+    <a href="index.html#portfolio" class="mobile-nav-link">Portfólio</a>
+    <a href="index.html#contacto" class="mobile-nav-link">Contacto</a>
+    <a href="#inscricao" class="btn btn-primary">Inscrever-me</a>
+  </div>
+
+  <main>
+    <section class="banquet-hero">
+      <div class="container service-hero-content">
+        <span class="section-tag">Experiência medieval</span>
+        <h1>Banquete Del Rei</h1>
+        <p class="service-lead">Uma noite de mesa farta, histórias e tradição medieval. Garanta o seu lugar à mesa do rei.</p>
+      </div>
+    </section>
+
+    <section class="container banquet-layout" aria-label="Informações e inscrição">
+      <aside class="banquet-details">
+        <h2>Reserve o seu lugar</h2>
+        <p>Preencha o formulário com os dados de todos os participantes. Após recebermos a inscrição, enviaremos por email a informação necessária para o pagamento por transferência bancária.</p>
+        <ul class="banquet-facts">
+          <li><strong>Prazo de pagamento</strong><span>21 de Setembro</span></li>
+          <li><strong>Inscrição</strong><span>Uma inscrição por responsável</span></li>
+          <li><strong>Menus</strong><span>Indique no formulário se precisar de menu vegetariano</span></li>
+        </ul>
+      </aside>
+
+      <section class="banquet-form-card" id="inscricao" aria-labelledby="inscricao-titulo">
+        <h2 id="inscricao-titulo">Formulário de inscrição</h2>
+        <form id="banquetForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Número de telefone</label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="nif">NIF</label>
+              <input id="nif" name="nif" type="text" inputmode="numeric" pattern="[0-9]{9}" maxlength="9" required>
+              <small class="form-help">Indique os 9 dígitos do NIF.</small>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="adultos">Número de adultos a inscrever</label>
+              <input id="adultos" name="adultos" type="number" min="1" step="1" required>
+            </div>
+            <div class="form-group">
+              <label for="criancas">Número de crianças a inscrever</label>
+              <input id="criancas" name="criancas" type="number" min="0" step="1" value="0" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vegetarianos">Menu vegetariano</label>
+            <textarea id="vegetarianos" name="vegetarianos" placeholder="Caso pretendam menu vegetariano para algum dos inscritos, indique aqui o número de vegetarianos."></textarea>
+          </div>
+          <label class="banquet-consent">
+            <input type="checkbox" name="consentimento" required>
+            <span>Autorizo o tratamento destes dados para gerir a minha inscrição no Banquete Del Rei.</span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar inscrição</button>
+          <p class="banquet-status" id="banquetStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Lusitania Medieval. Todos os direitos reservados.</p>
+        <p class="footer-company-meta">LUSITANIA MEDIEVAL LDA | NIF: 519041283 | Loures, Lisboa</p>
+        <p class="footer-legal-links"><a href="termos-condicoes.html">Termos e Condições</a><span aria-hidden="true"> | </span><a href="politica-privacidade.html">Política de Privacidade</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cookie-consent.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuToggle && mobileNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = menuToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 50));
+    document.getElementById('banquetForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = encodeURIComponent(`[Inscrição] Banquete Del Rei - ${data.get('nome')}`);
+      const body = encodeURIComponent(`Nome: ${data.get('nome')}\nTelefone: ${data.get('telefone')}\nEmail: ${data.get('email')}\nNIF: ${data.get('nif')}\nAdultos: ${data.get('adultos')}\nCrianças: ${data.get('criancas')}\nMenu vegetariano: ${data.get('vegetarianos') || 'Nenhum indicado'}`);
+      document.getElementById('banquetStatus').textContent = 'A abrir o seu programa de email para concluir a inscrição.';
+      window.location.href = `mailto:contacto@lusitaniamedieval.pt?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

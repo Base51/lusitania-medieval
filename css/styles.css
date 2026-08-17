@@ -960,6 +960,115 @@ a {
 }
 
 /* ============================================
+   Banquete Del Rei Registration
+   ============================================ */
+.banquet-page {
+  background:
+    linear-gradient(180deg, rgba(10, 9, 8, 0.72), var(--color-bg) 28%, var(--color-bg-alt) 100%),
+    url('../assets/img/hero/hero-main.webp') center top / cover fixed;
+}
+
+.banquet-hero {
+  padding: var(--space-3xl) 0 var(--space-xl);
+  text-align: center;
+}
+
+.banquet-hero .service-lead {
+  margin: 0 auto;
+}
+
+.banquet-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: var(--space-xl);
+  align-items: start;
+  padding-bottom: var(--space-3xl);
+}
+
+.banquet-details,
+.banquet-form-card {
+  padding: var(--space-xl);
+  background: rgba(17, 17, 16, 0.86);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.banquet-details {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-md));
+}
+
+.banquet-details h2,
+.banquet-form-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+}
+
+.banquet-details p {
+  margin-bottom: var(--space-lg);
+}
+
+.banquet-facts {
+  display: grid;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.banquet-facts strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.banquet-facts span {
+  color: var(--color-text);
+}
+
+.banquet-form-card .form-row {
+  margin-bottom: var(--space-md);
+}
+
+.banquet-form-card .form-group {
+  margin-bottom: var(--space-md);
+}
+
+.banquet-form-card .form-group:last-child {
+  margin-bottom: var(--space-lg);
+}
+
+.banquet-form-card input[type='number'] {
+  appearance: textfield;
+}
+
+.banquet-form-card input[type='number']::-webkit-inner-spin-button,
+.banquet-form-card input[type='number']::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.banquet-consent {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-start;
+  margin-bottom: var(--space-lg);
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+}
+
+.banquet-consent input {
+  margin-top: 0.35rem;
+  accent-color: var(--color-gold);
+}
+
+.banquet-status {
+  margin-top: var(--space-md);
+  color: var(--color-gold-light);
+  font-size: 0.9rem;
+}
+
+/* ============================================
    Service Detail Page
    ============================================ */
 .service-page {
@@ -1211,6 +1320,11 @@ a {
   }
   
   .contact-form {
+    padding: var(--space-lg);
+  }
+
+  .banquet-details,
+  .banquet-form-card {
     padding: var(--space-lg);
   }
 }
