@@ -433,6 +433,10 @@
               <label for="mensagem">Mensagem</label>
               <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o seu evento..."></textarea>
             </div>
+            <label class="banquet-consent">
+              <input type="checkbox" name="publicidade" checked>
+              <span>Aceito receber novidades e informações sobre futuros eventos da Lusitania Medieval.</span>
+            </label>
             <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Pedido</button>
           </form>
         </div>
@@ -591,7 +595,8 @@
           telefone:      normalizedTelefone,
           tipo:          formData.get('tipo')          || '',
           participantes: formData.get('participantes') || 'Não especificado',
-          mensagem:      formData.get('mensagem')      || 'Sem mensagem adicional'
+          mensagem:      formData.get('mensagem')      || 'Sem mensagem adicional',
+          publicidade:   formData.get('publicidade')   || ''
         };
 
         // Fire Formspree + Make in parallel; Make failure is non-blocking
