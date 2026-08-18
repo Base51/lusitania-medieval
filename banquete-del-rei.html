@@ -94,7 +94,7 @@
               <input id="adultos" name="adultos" type="number" min="1" step="1" required>
             </div>
             <div class="form-group">
-              <label for="criancas">Número de crianças a inscrever</label>
+              <label for="criancas">Número de crianças a inscrever até 12 anos de idade</label>
               <input id="criancas" name="criancas" type="number" min="0" step="1" value="0" required>
             </div>
           </div>
@@ -105,6 +105,10 @@
           <label class="banquet-consent">
             <input type="checkbox" name="consentimento" required>
             <span>Autorizo o tratamento destes dados para gerir a minha inscrição no Banquete Del Rei.</span>
+          </label>
+          <label class="banquet-consent">
+            <input type="checkbox" name="publicidade">
+            <span>Aceito receber novidades e informações sobre futuros eventos da Lusitania Medieval.</span>
           </label>
           <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar inscrição</button>
           <p class="banquet-status" id="banquetStatus" role="status" aria-live="polite"></p>
