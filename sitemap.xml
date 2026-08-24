@@ -31,6 +31,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lusitaniamedieval.com/banquete-termos.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lusitaniamedieval.com/termos-condicoes.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
