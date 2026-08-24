@@ -1126,6 +1126,15 @@ a {
   accent-color: var(--color-gold);
 }
 
+.banquet-consent a {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.banquet-consent a:hover {
+  color: var(--color-gold-light);
+}
+
 .banquet-status {
   margin-top: var(--space-md);
   color: var(--color-gold-light);
