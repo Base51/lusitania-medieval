@@ -1027,6 +1027,70 @@ a {
   color: var(--color-text);
 }
 
+.banquet-menu {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.banquet-menu h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.banquet-menu-group {
+  margin-bottom: var(--space-lg);
+}
+
+.banquet-menu-group:last-child {
+  margin-bottom: 0;
+}
+
+.banquet-menu-group h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.banquet-menu-group ul {
+  display: grid;
+  gap: var(--space-sm);
+  list-style: none;
+}
+
+.banquet-menu-group li {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.banquet-menu-group li strong {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.banquet-menu-group li span {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.banquet-map {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.banquet-map h2 {
+  margin-bottom: var(--space-md);
+}
+
+.banquet-map iframe {
+  display: block;
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
 .banquet-form-card .form-row {
   margin-bottom: var(--space-md);
 }
