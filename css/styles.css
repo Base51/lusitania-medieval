@@ -498,6 +498,40 @@ a {
 }
 
 /* ============================================
+   Featured Event Callout
+   ============================================ */
+.banquet-home-callout {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-lg) 0;
+  background:
+    linear-gradient(105deg, rgba(201, 169, 98, 0.18), rgba(201, 169, 98, 0.04) 48%, rgba(5, 5, 4, 0.92)),
+    var(--color-bg-dark);
+  border-top: 1px solid rgba(201, 169, 98, 0.35);
+  border-bottom: 1px solid rgba(201, 169, 98, 0.2);
+}
+
+.banquet-home-callout-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.banquet-home-callout .section-tag {
+  margin-bottom: var(--space-xs);
+}
+
+.banquet-home-callout h2 {
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.banquet-home-callout p {
+  color: var(--color-text);
+}
+
+/* ============================================
    Services Section
    ============================================ */
 .services-grid {
@@ -1371,6 +1405,15 @@ a {
   
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .banquet-home-callout-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .banquet-home-callout .btn {
+    width: 100%;
   }
 
   .banquet-gallery-grid {
