@@ -1047,6 +1047,47 @@ a {
   transform: scale(1.03);
 }
 
+.banquet-experience {
+  padding: var(--space-xl) 0;
+  background: rgba(5, 5, 4, 0.45);
+  border-top: 1px solid rgba(201, 169, 98, 0.25);
+  border-bottom: 1px solid rgba(201, 169, 98, 0.25);
+}
+
+.banquet-experience-heading {
+  margin-bottom: var(--space-lg);
+}
+
+.banquet-experience-heading h2 {
+  max-width: 620px;
+  margin-top: var(--space-xs);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.banquet-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.banquet-experience-grid article {
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-gold);
+  border-radius: var(--radius-md);
+}
+
+.banquet-experience-grid h3 {
+  margin-bottom: var(--space-xs);
+  color: var(--color-gold-light);
+  font-size: 1.15rem;
+}
+
+.banquet-experience-grid p {
+  font-size: 0.95rem;
+}
+
 .banquet-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -1425,6 +1466,10 @@ a {
   .banquet-gallery-main {
     grid-column: 1 / span 2;
     grid-row: 1;
+  }
+
+  .banquet-experience-grid {
+    grid-template-columns: 1fr;
   }
 
   .banquet-layout {
