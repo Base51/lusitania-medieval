@@ -68,7 +68,7 @@ ${data.mensagem || 'Sem mensagem adicional'}
 `
         );
         
-        const mailtoLink = `mailto:contacto@lusitaniamedieval.pt?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:info@lusitaniamedieval.com?subject=${subject}&body=${body}`;
         window.location.href = mailtoLink;
     });
 }
