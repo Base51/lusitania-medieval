@@ -79,6 +79,7 @@ Consultar a pasta `docs/`:
 - [Operações](docs/05_operacoes.md)
 - [Candidaturas](docs/06_candidaturas.md)
 - [Website Técnico e SEO](docs/07_website_tecnico.md)
+- [Plano da Versão Inglesa](docs/08_website_versao_inglesa.md)
 - [Documento Mestre](docs/Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md)
 
 ## Licença

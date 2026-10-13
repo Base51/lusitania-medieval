@@ -83,6 +83,15 @@ Guia técnico do website e SEO:
 
 ---
 
+## 08_website_versao_inglesa.md
+Plano de implementação da versão inglesa:
+- Arquitetura de URLs em `/en/`
+- Tradução e interface bilingue
+- Canonical, hreflang, sitemap e dados estruturados
+- Fases de execução, QA, publicação e rollback
+
+---
+
 ## Documento Mestre Completo
 
 **Lusitania_Medieval_Documento_Mestre_Completo_v1.0.md**
