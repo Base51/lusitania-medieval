@@ -4,20 +4,17 @@
 
 Este documento concentra o estado tecnico atual do website da Lusitania Medieval e define prioridades praticas de melhoria.
 
-## 2. Estado Atual (Scan)
+## 2. Estado Atual (27 de outubro de 2026)
 
 ### 2.1 Estrutura e Paginas
 
-Paginas publicas identificadas:
+Paginas publicas indexaveis implementadas:
 
-- index.html
-- team-building.html
-- casamentos.html
-- eventos.html
-- politica-privacidade.html
-- termos-condicoes.html
-- livro-reclamacoes.html
-- 404.html
+- 8 paginas em portugues na raiz;
+- 8 paginas equivalentes em ingles sob `/en/`;
+- uma pagina `404.html` partilhada, com localizacao dependente do caminho e `noindex, follow`.
+
+O mapa completo de URLs e as regras de manutencao estao em `docs/08_website_versao_inglesa.md`.
 
 ### 2.2 SEO Tecnico Base
 
@@ -25,10 +22,12 @@ Ja implementado:
 
 - title e meta description por pagina
 - canonical por pagina
+- `hreflang` reciproco `pt-PT`, `en` e `x-default` nos 16 HTML indexaveis
+- `og:locale` e locale alternativo por idioma
 - Open Graph e Twitter cards
-- JSON-LD nas paginas principais
+- JSON-LD localizado nas paginas principais e de servico
 - robots.txt com referencia ao sitemap
-- sitemap.xml com paginas principais e legais
+- sitemap.xml com 16 URLs, namespace XHTML e alternancias linguisticas
 
 ### 2.3 Consentimento e Analytics
 
@@ -36,9 +35,23 @@ Ja implementado:
 
 - Google tag com consent mode default denied
 - Banner de cookies e preferencia persistida em localStorage
+- Textos do banner selecionados por `document.documentElement.lang`
+- A mesma decisao de consentimento e respeitada nos dois idiomas
 - Ativacao de analytics apenas apos consentimento
 
-### 2.4 Imagens
+### 2.4 Internacionalizacao
+
+Ja implementado:
+
+- portugues de Portugal mantido nas URLs de raiz;
+- ingles internacional em `/en/`, com slugs ingleses estaveis;
+- seletor `PT | EN` no cabecalho desktop e no menu mobile;
+- recursos ingleses referenciados a partir da raiz (`/assets/`, `/css/`, `/js/`);
+- homepage inglesa com formulario, validacao e mensagens localizadas;
+- endpoints, nomes de campos e valores tecnicos das integracoes preservados;
+- 404 inglesa ativada apenas quando o caminho comeca por `/en/`.
+
+### 2.5 Imagens
 
 Ja implementado:
 
@@ -50,19 +63,37 @@ Pendente critico:
 
 - conversao de imagens legadas de portfolio para WebP
 
+### 2.6 Validacao bilingue local
+
+Concluido em 27 de outubro de 2026:
+
+- `node scripts/validate-bilingual-site.js`: oito pares e auditoria global aprovados;
+- 16 paginas indexaveis responderam com HTTP 200 e o atributo `lang` correto;
+- crawl interno recursivo: 28 destinos, sem links ou fragmentos quebrados;
+- 404 local validada em caminhos PT e EN, com HTTP 404 e conteudo localizado;
+- seletor, menu mobile, consentimento persistente e formulario ingles validados sem submissao real;
+- imagens lazy carregadas sem falhas;
+- Lighthouse mobile PT: performance 60, acessibilidade 95, boas praticas 100 e SEO 100;
+- Lighthouse mobile EN: performance 70, acessibilidade 95, boas praticas 100 e SEO 100;
+- CLS: 0 em PT e 0,008 em EN, sem regressao relevante.
+
+Os dois idiomas apresentam os mesmos achados Lighthouse de contraste e ordem de headings. Nao foram introduzidos pela versao inglesa e permanecem no backlog geral.
+
 ## 3. Backlog Prioritario
 
-## P0 (Impacto imediato)
+## P0 (Antes da publicacao bilingue)
 
-1. Converter assets de portfolio em .png/.jpg para .webp
-2. Atualizar referencias HTML para os novos ficheiros
-3. Definir width e height nas imagens acima da dobra para reduzir CLS
+1. Registar revisao editorial e juridica das tres paginas legais inglesas
+2. Realizar uma submissao bem-sucedida e controlada do formulario ingles e validar conversoes
+3. Publicar e validar deep links e 404 inglesa no dominio real
+4. Submeter o sitemap e inspecionar URLs no Google Search Console
 
 ## P1 (Curto prazo)
 
-1. Definir imagem OG dedicada (1200x630) em vez do logo
-2. Rever links placeholder (exemplo: Facebook com href="#")
+1. Converter assets de portfolio legados em .png/.jpg para .webp
+2. Definir imagem OG dedicada (1200x630) em vez do logo
 3. Validar structured data no Rich Results Test
+4. Corrigir os achados comuns de contraste e ordem de headings do Lighthouse
 
 ## P2 (Evolucao)
 
@@ -75,10 +106,13 @@ Pendente critico:
 Antes de cada release:
 
 1. Confirmar sitemap.xml atualizado
-2. Confirmar canonical e meta description nas paginas alteradas
-3. Confirmar ausencia de links quebrados
-4. Confirmar banner de cookies funcional
-5. Confirmar desempenho mobile sem regressao relevante
+2. Confirmar canonical, `hreflang` e meta description nos dois idiomas
+3. Confirmar ausencia de links ou recursos quebrados em `/en/`
+4. Confirmar banner de cookies e persistencia de consentimento nos dois idiomas
+5. Confirmar revisao das paginas legais inglesas
+6. Confirmar formulario e conversoes sem submissao duplicada
+7. Confirmar desempenho mobile sem regressao relevante
+8. Apos publicar, testar uma URL inexistente sob `/en/`
 
 ## 5. Comandos Uteis
 
@@ -94,14 +128,20 @@ Servidor local Python:
 python -m http.server 5500
 ```
 
+Validacao estatica dos oito pares bilingues:
+
+```bash
+node scripts/validate-bilingual-site.js
+```
+
 ## 6. Proxima Execucao Recomendada
 
-Sequencia sugerida para proxima iteracao:
+Sequencia sugerida para concluir o lancamento bilingue:
 
-1. Converter imagens de portfolio para WebP
-2. Atualizar caminhos no HTML
-3. Inserir width/height nas imagens criticas
-4. Rodar auditoria Lighthouse mobile e corrigir os 3 piores pontos
+1. Rever o texto legal ingles
+2. Realizar uma submissao bem-sucedida e controlada do formulario
+3. Publicar e validar 404, sitemap e URLs no dominio real
+4. Submeter o sitemap no Google Search Console
 
 ## 7. QA Rapido para Lancamento de Campanha (Google Ads)
 

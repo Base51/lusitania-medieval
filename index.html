@@ -6,12 +6,17 @@
   <meta name="description" content="Especialistas em team building corporativo, animação de casamentos e eventos medievais em Portugal. Rigor histórico, impacto visual e segurança." />
   <title>Lusitania Medieval | Team Building, Casamentos e Eventos em Portugal</title>
   <link rel="canonical" href="https://lusitaniamedieval.com/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://lusitaniamedieval.com/" />
+  <link rel="alternate" hreflang="en" href="https://lusitaniamedieval.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://lusitaniamedieval.com/" />
 
   <!-- Open Graph -->
   <meta property="og:url" content="https://lusitaniamedieval.com/" />
   <meta property="og:title" content="Lusitania Medieval | Team Building, Casamentos e Eventos em Portugal" />
   <meta property="og:description" content="Especialistas em team building corporativo, animação de casamentos e eventos medievais em Portugal. Rigor histórico, impacto visual e segurança." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:image" content="https://lusitaniamedieval.com/assets/img/brand/logo_light_theme.png" />
 
   <!-- Twitter -->
@@ -169,7 +174,7 @@
   <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="#" class="logo">
+      <a href="/" class="logo">
         <img src="assets/img/brand/logo_dark_theme.png" alt="Lusitania Medieval" class="logo-img" loading="eager" decoding="async" width="890" height="272">
       </a>
       
@@ -178,6 +183,12 @@
         <a href="#servicos" class="nav-link">Serviços</a>
         <a href="#portfolio" class="nav-link">Portfólio</a>
         <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <nav class="language-switcher language-switcher--desktop" aria-label="Selecionar idioma">
+        <a href="/" lang="pt-PT" hreflang="pt-PT" aria-current="page">PT</a>
+        <span aria-hidden="true">|</span>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
       </nav>
 
       <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
@@ -197,6 +208,11 @@
     <a href="#portfolio" class="mobile-nav-link">Portfólio</a>
     <a href="#contacto" class="mobile-nav-link">Contacto</a>
     <a href="#contacto" class="btn btn-primary">Pedir Proposta</a>
+    <nav class="language-switcher language-switcher--mobile" aria-label="Selecionar idioma">
+      <a href="/" lang="pt-PT" hreflang="pt-PT" aria-current="page">PT</a>
+      <span aria-hidden="true">|</span>
+      <a href="/en/" lang="en" hreflang="en">EN</a>
+    </nav>
   </div>
 
   <main>
@@ -409,7 +425,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="+351 912 345 678" pattern="[\+0-9\s()-]{8,22}" title="Inclua o indicativo do país, por exemplo +351 912 345 678." required>
+                <input type="tel" id="telefone" name="telefone" inputmode="tel" placeholder="+351 912 345 678" pattern="[\+0-9\s\(\)\-]{8,22}" title="Inclua o indicativo do país, por exemplo +351 912 345 678." required>
                 <small class="form-help">Inclua o indicativo do país, por exemplo +351 912 345 678.</small>
               </div>
             </div>

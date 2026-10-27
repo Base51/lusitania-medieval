@@ -4,6 +4,27 @@
   var CONSENT_KEY = 'lm_cookie_consent_v1';
   var GA_ID = window.LM_GA_ID || 'G-KWH7E5N39M';
   var ADS_ID = window.LM_ADS_ID || 'AW-1010499385';
+  var COPY = {
+    pt: {
+      title: 'Privacidade e Cookies',
+      message: 'Usamos cookies analiticos e de publicidade para melhorar a sua experiencia. Pode aceitar ou rejeitar estes cookies.',
+      reject: 'Rejeitar',
+      accept: 'Aceitar',
+      manage: 'Cookies'
+    },
+    en: {
+      title: 'Privacy and Cookies',
+      message: 'We use analytics and advertising cookies to improve your experience. You can accept or reject these cookies.',
+      reject: 'Reject',
+      accept: 'Accept',
+      manage: 'Cookies'
+    }
+  };
+
+  function getCopy() {
+    var language = (document.documentElement.lang || 'pt-PT').toLowerCase();
+    return language.indexOf('en') === 0 ? COPY.en : COPY.pt;
+  }
 
   function gtagSafe() {
     if (typeof window.gtag === 'function') {
@@ -64,23 +85,25 @@
   }
 
   function createBanner() {
+    var copy = getCopy();
     var banner = document.createElement('aside');
     banner.className = 'cookie-banner';
     banner.id = 'cookieBanner';
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', copy.title);
     banner.innerHTML =
-      '<p><strong>Privacidade e Cookies</strong><br>Usamos cookies analiticos e de publicidade para melhorar a sua experiencia. Pode aceitar ou rejeitar estes cookies.</p>' +
+      '<p><strong>' + copy.title + '</strong><br>' + copy.message + '</p>' +
       '<div class="cookie-banner-actions">' +
-      '  <button type="button" class="btn btn-outline" id="cookieReject">Rejeitar</button>' +
-      '  <button type="button" class="btn btn-primary" id="cookieAccept">Aceitar</button>' +
+      '  <button type="button" class="btn btn-outline" id="cookieReject">' + copy.reject + '</button>' +
+      '  <button type="button" class="btn btn-primary" id="cookieAccept">' + copy.accept + '</button>' +
       '</div>';
 
     var manageBtn = document.createElement('button');
     manageBtn.type = 'button';
     manageBtn.className = 'cookie-manage-btn';
     manageBtn.id = 'cookieManage';
-    manageBtn.textContent = 'Cookies';
+    manageBtn.textContent = copy.manage;
 
     document.body.appendChild(banner);
     document.body.appendChild(manageBtn);

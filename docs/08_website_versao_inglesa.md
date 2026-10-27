@@ -2,14 +2,37 @@
 
 ## 1. Estado do Documento
 
-- Estado: planeado
+- Estado: implementado localmente; QA final e publicação pendentes
 - Data da decisão: 13 de outubro de 2026
+- Data da implementação: 27 de outubro de 2026
+- Ponto de recuperação: `restore/pre-english-site-2026-10-27`
 - Idioma de origem: português de Portugal (`pt-PT`)
 - Idioma de destino: inglês internacional (`en`)
 - Alojamento: GitHub Pages com domínio próprio
 - Estratégia escolhida: páginas HTML estáticas em `/en/`
 
-Este documento define o âmbito, a arquitetura, a sequência de trabalho, os requisitos de SEO e os critérios de aceitação para lançar uma versão inglesa completa do website Lusitania Medieval.
+Este documento regista o âmbito, a arquitetura, a implementação, os requisitos de SEO e os critérios de aceitação para lançar uma versão inglesa completa do website Lusitania Medieval.
+
+### 1.1 Estado da implementação
+
+Concluído no código:
+
+- oito páginas inglesas em `/en/` e oito pares PT/EN;
+- seletor de idioma desktop e mobile;
+- banner de cookies bilingue com preferência partilhada;
+- homepage e formulário localizados sem alterar contratos das integrações;
+- canonical, `hreflang`, `x-default` e locales sociais;
+- JSON-LD e breadcrumbs ingleses nas páginas aplicáveis;
+- sitemap com 16 URLs e alternâncias recíprocas;
+- 404 única e bilingue, sensível ao prefixo `/en/`;
+- recursos ingleses referenciados a partir da raiz.
+
+Pendente antes da publicação:
+
+- revisão editorial e jurídica das páginas legais inglesas;
+- uma submissão bem-sucedida e controlada do formulário, com validação das conversões;
+- validação da 404 e dos deep links no GitHub Pages publicado;
+- submissão do sitemap e inspeção no Google Search Console.
 
 ## 2. Objetivo
 
@@ -335,7 +358,7 @@ Sitemap: https://lusitaniamedieval.com/sitemap.xml
 
 ### 9.2 Ficheiros modificados
 
-| Ficheiro ou grupo | Alteração prevista |
+| Ficheiro ou grupo | Alteração implementada |
 |---|---|
 | Oito páginas HTML portuguesas | Seletor de idioma, `hreflang`, locale social e metadados complementares. |
 | `css/styles.css` | Estados e responsividade do seletor de idioma. |
@@ -365,6 +388,8 @@ Sitemap: https://lusitaniamedieval.com/sitemap.xml
 
 Saída: conteúdo aprovado e URLs congeladas.
 
+Estado: concluída. Foi criada e publicada a tag `restore/pre-english-site-2026-10-27` antes das alterações.
+
 ### Fase 1 — Base partilhada
 
 1. Implementar o seletor de idioma numa página representativa.
@@ -375,6 +400,8 @@ Saída: conteúdo aprovado e URLs congeladas.
 
 Saída: componentes partilhados prontos para reutilização.
 
+Estado: concluída no código.
+
 ### Fase 2 — Páginas inglesas
 
 1. Criar `en/index.html` e validar todos os caminhos de recursos.
@@ -384,6 +411,8 @@ Saída: componentes partilhados prontos para reutilização.
 5. Validar links, fragmentos, CTAs e navegação dentro de `/en/`.
 
 Saída: oito páginas inglesas navegáveis, ainda sem lançamento.
+
+Estado: concluída no código; revisão legal pendente.
 
 ### Fase 3 — SEO técnico
 
@@ -396,6 +425,8 @@ Saída: oito páginas inglesas navegáveis, ainda sem lançamento.
 
 Saída: cluster linguístico completo e rastreável.
 
+Estado: concluída e validada localmente.
+
 ### Fase 4 — Erros e documentação
 
 1. Tornar a 404 sensível ao caminho `/en/`.
@@ -403,6 +434,8 @@ Saída: cluster linguístico completo e rastreável.
 3. Registar qualquer divergência aprovada entre os idiomas.
 
 Saída: experiência de erro e manutenção documentadas.
+
+Estado: concluída no código; fallback publicado ainda por validar.
 
 ### Fase 5 — QA e publicação
 
@@ -415,6 +448,8 @@ Saída: experiência de erro e manutenção documentadas.
 7. Submeter o sitemap e inspecionar URLs no Google Search Console.
 
 Saída: versão inglesa publicada e monitorizada.
+
+Estado: QA local concluído, exceto submissão real controlada. Revisão legal e publicação pendentes.
 
 ### 10.1 Trabalho paralelo permitido
 
@@ -431,38 +466,40 @@ As seguintes tarefas devem permanecer sequenciais:
 
 ### 11.1 Funcionais
 
-- [ ] As oito URLs inglesas respondem com sucesso.
-- [ ] Nenhum CSS, JavaScript, ícone ou imagem está quebrado em `/en/`.
-- [ ] O seletor abre a página equivalente nos dois sentidos.
-- [ ] Navegação e fragmentos funcionam em desktop e mobile.
-- [ ] O banner de cookies mostra o idioma correto.
-- [ ] Uma decisão de consentimento é mantida ao mudar de idioma.
-- [ ] O formulário inglês valida, envia e mostra estados em inglês.
+- [x] As oito URLs inglesas respondem com sucesso no servidor local.
+- [x] Nenhum CSS, JavaScript, ícone ou imagem está quebrado em `/en/`.
+- [x] O seletor abre a página equivalente nos dois sentidos.
+- [x] Navegação e fragmentos funcionam em desktop e mobile.
+- [x] O banner de cookies mostra o idioma correto.
+- [x] Uma decisão de consentimento é mantida ao mudar de idioma.
+- [x] O formulário inglês valida e mostra estados em inglês sem envio externo.
+- [ ] Uma submissão real controlada conclui com sucesso.
 - [ ] Conversões são disparadas apenas após submissão bem-sucedida e consentida.
-- [ ] A 404 apresenta o idioma esperado para caminhos ingleses e portugueses.
+- [x] A 404 apresenta o idioma esperado para caminhos ingleses e portugueses no servidor local.
+- [ ] A 404 inglesa está validada no GitHub Pages publicado.
 
 ### 11.2 SEO
 
-- [ ] Existem 16 URLs indexáveis únicas no sitemap.
-- [ ] Cada página tem exatamente um canonical próprio.
-- [ ] Cada página tem `pt-PT`, `en` e `x-default` recíprocos.
-- [ ] O atributo `lang` corresponde ao conteúdo.
-- [ ] Títulos e descrições são únicos e localizados.
-- [ ] `og:url` corresponde à URL canónica.
-- [ ] JSON-LD usa idioma, URL e breadcrumbs corretos.
-- [ ] Não existem canonicals ingleses apontados para português.
-- [ ] A 404 permanece `noindex, follow` e fora do sitemap.
-- [ ] `robots.txt` não bloqueia `/en/`.
+- [x] Existem 16 URLs indexáveis únicas no sitemap.
+- [x] Cada página tem exatamente um canonical próprio.
+- [x] Cada página tem `pt-PT`, `en` e `x-default` recíprocos.
+- [x] O atributo `lang` corresponde ao conteúdo.
+- [x] Títulos e descrições são únicos e localizados.
+- [x] `og:url` corresponde à URL canónica.
+- [x] JSON-LD usa idioma, URL e breadcrumbs corretos.
+- [x] Não existem canonicals ingleses apontados para português.
+- [x] A 404 permanece `noindex, follow` e fora do sitemap.
+- [x] `robots.txt` não bloqueia `/en/`.
 
 ### 11.3 Qualidade
 
-- [ ] Não existem textos portugueses residuais nas páginas inglesas, exceto nomes legais ou próprios.
+- [x] Não existem textos portugueses residuais nas páginas inglesas, exceto nomes legais ou próprios.
 - [ ] As páginas legais têm revisão registada.
-- [ ] Não existem links internos quebrados.
-- [ ] Não existem sobreposições no cabeçalho entre 320 px e desktop largo.
-- [ ] Navegação por teclado e foco visível funcionam.
-- [ ] Lighthouse da homepage inglesa permanece materialmente equivalente ao da portuguesa.
-- [ ] Não há regressão relevante de CLS ou tempo de carregamento.
+- [x] Não existem links internos quebrados.
+- [x] Não existem sobreposições no cabeçalho entre 320 px e desktop largo.
+- [x] Navegação por teclado e foco visível funcionam.
+- [x] Lighthouse da homepage inglesa permanece materialmente equivalente ao da portuguesa.
+- [x] Não há regressão relevante de CLS ou tempo de carregamento.
 
 ## 12. Validação Técnica
 
@@ -479,7 +516,15 @@ URLs mínimas:
 - `http://127.0.0.1:5500/eventos.html`
 - `http://127.0.0.1:5500/en/events.html`
 
-### 12.2 Crawl de links
+### 12.2 Validação estática bilingue
+
+```bash
+node scripts/validate-bilingual-site.js
+```
+
+Este comando sem dependências valida os oito pares, canonical, `hreflang`, locales sociais, JSON-LD, JavaScript inline, links, fragmentos, recursos, integrações, sitemap e o contrato estático da 404.
+
+### 12.3 Crawl de links
 
 ```bash
 npx --yes linkinator http://127.0.0.1:5500 --recurse
@@ -487,7 +532,7 @@ npx --yes linkinator http://127.0.0.1:5500 --recurse
 
 Falhas exclusivamente externas devem ser separadas de falhas em páginas, recursos e fragmentos internos.
 
-### 12.3 Validações adicionais
+### 12.4 Validações adicionais
 
 1. Analisar `sitemap.xml` como XML e confirmar 16 `<loc>` únicos.
 2. Auditar cada HTML para um canonical e três alternates.
